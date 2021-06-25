@@ -1,0 +1,227 @@
+* {
+  margin: 0;
+  padding: 0;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  font-family: 'Source Code Pro', monospace;
+  position: relative;
+  overflow: hidden;
+  cursor: none;
+}
+
+body:hover .the_beginning .imgs_container img {
+  -webkit-transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
+          transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
+  margin-top: initial;
+}
+
+body .navigationContainer {
+  position: absolute;
+  z-index: 100;
+  color: white;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+body .navigationContainer .navigationIcons {
+  font-size: 2rem;
+  display: none;
+  text-shadow: 0 0 1rem white;
+}
+
+body .the_beginning {
+  position: relative;
+  border-top: 1rem solid #3700FF;
+  border-right: 1rem solid #3700FF;
+  overflow: hidden;
+  padding: 1.5%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  min-height: 100vh;
+  min-width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background-color: black !important;
+  color: white;
+}
+
+body .the_beginning .imgs_container {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  height: 85vh;
+  width: 85vh;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+body .the_beginning .imgs_container img {
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
+  margin-top: -10%;
+  opacity: .2;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all ease 1.5s;
+  transition: all ease 1.5s;
+  -webkit-transform: rotateX(50deg) rotateY(20deg) translateZ(0px);
+          transform: rotateX(50deg) rotateY(20deg) translateZ(0px);
+}
+
+body .the_beginning .imgs_container .imgs_container2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  left: 0;
+  margin-left: 35%;
+  height: 65vh;
+  width: 65vh;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+body .the_beginning .imgs_container .imgs_container2 img {
+  opacity: .4;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+}
+
+body .the_beginning .imgs_container .imgs_container2 .imgs_container3 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  position: absolute;
+  left: 0;
+  margin-left: 35%;
+  height: 45vh;
+  width: 45vh;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+}
+
+body .the_beginning .imgs_container .imgs_container2 .imgs_container3 img {
+  opacity: .6;
+  height: 100%;
+  width: 100%;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+body .the_beginning .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .the_beginning .row i {
+  z-index: 10000;
+  font-size: 2rem;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+body .the_beginning .row i:hover {
+  color: #3700FF;
+}
+
+body .the_beginning .top, body .the_beginning .middle {
+  width: 100%;
+}
+
+body .the_beginning .middle {
+  font-size: 2rem;
+}
+
+body .the_beginning .middle .design, body .the_beginning .middle .develop {
+  position: relative;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+}
+
+body .the_beginning .middle .design::after, body .the_beginning .middle .develop::after {
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+  content: '';
+  position: absolute;
+  height: 0%;
+  width: 90%;
+  background-color: #3700FF;
+  left: 0;
+  bottom: -25%;
+  border-radius: .5rem;
+}
+
+body .the_beginning .middle .selected::after {
+  content: '';
+  position: absolute;
+  height: 10%;
+  width: 90%;
+  background-color: #3700FF;
+  left: 0;
+  bottom: -25%;
+}
+
+body .the_beginning .bottom.row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 10%;
+}
+
+body .the_beginning .bottom.row div {
+  border-radius: 100%;
+  height: .75rem;
+  width: .75rem;
+  background-color: rgba(255, 255, 255, 0.479);
+  cursor: pointer;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+body .the_beginning .bottom.row div:hover {
+  background-color: white;
+}
+/*# sourceMappingURL=styles.css.map */
