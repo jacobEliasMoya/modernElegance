@@ -1,9 +1,11 @@
 const navigationIndicator = document.querySelector('.navigationContainer');
 const pageWidth = window.innerWidth;
+const pageHeight = window.innerHeight;
 let mainDirection = null;
 const contactedItem = document.querySelector('.top i');
-
 const imgRotate = document.querySelectorAll('.imgs_container img');
+const skillsSection = document.querySelector('.recent_works');
+const homeSection = document.querySelector('.the_beginning');
 
 const imageRotationFunc = () =>{
     switch (mainDirection){
@@ -12,69 +14,114 @@ const imageRotationFunc = () =>{
                 img.style='transform: rotateX(0deg) rotateY(-30deg) translateZ(200px);'
             })
         break;
-        default:
+        case 'right':
             imgRotate.forEach(img=>{
                 img.style='transform: rotateX(0deg) rotateY(30deg) translateZ(200px);'
-            })    
+            })   
+        break;
+        case 'center':
+            imgRotate.forEach(img=>{
+                img.style='transform: rotateX(0deg) rotateY(0deg) translateZ(200px);'
+            }) 
+        break;
+        case 'down':
+            imgRotate.forEach(img=>{
+                img.style='transform: rotateX(-30deg) rotateY(0deg) translateZ(200px);'
+            }) 
+        break;
+        case 'up':
+            imgRotate.forEach(img=>{
+                img.style='transform: rotateX(30deg) rotateY(0deg) translateZ(200px);'
+            }) 
+        break;
         }
 }
 
-const displayDirection = (xAxis,pWidth) =>{
-    if(xAxis < pWidth/2){
+const displayDirection = (xAxis ,yAxis,pWidth) =>{
+    if(xAxis < pWidth/3.5 && yAxis < pageHeight/1.25 && yAxis > pageHeight/4.5){
         document.querySelector('.fa-chevron-right').style='display :none;';
         document.querySelector('.fa-chevron-left').style='display :block;';
+        document.querySelector('.fa-chevron-down').style='display :none;';
+        document.querySelector('.fa-chevron-up').style='display :none;';
+
         mainDirection = 'left';
         imageRotationFunc();
 
-    } else {
+    } else if(xAxis > pWidth/1.5  && yAxis < pageHeight/1.25 && yAxis > pageHeight/4.5) {
         document.querySelector('.fa-chevron-left').style='display :none;';
         document.querySelector('.fa-chevron-right').style='display :block;';    
+        document.querySelector('.fa-chevron-down').style='display :none;';
+        document.querySelector('.fa-chevron-up').style='display :none;';
+
         mainDirection = 'right';
         imageRotationFunc();
 
+    } else if(xAxis > pWidth/3.5 && xAxis < pWidth/1.5  && yAxis < pageHeight/1.25 && yAxis > pageHeight/4.5){
+        document.querySelector('.fa-chevron-left').style='display :block;';
+        document.querySelector('.fa-chevron-right').style='display :block;';  
+        document.querySelector('.fa-chevron-down').style='display :none;';
+        document.querySelector('.fa-chevron-up').style='display :none;';
+        mainDirection = 'center';
+        imageRotationFunc();
+    } else if(yAxis > pageHeight/1.25 && yAxis > pageHeight/4.5){
+        document.querySelector('.fa-chevron-down').style='display :block;';
+        document.querySelector('.fa-chevron-left').style='display :none;';
+        document.querySelector('.fa-chevron-right').style='display :none;';  
+        document.querySelector('.fa-chevron-up').style='display :none;';
+
+        mainDirection = 'down';
+        imageRotationFunc();
+    } else if(yAxis < pageHeight/1.25 && yAxis < pageHeight/4.5){
+        document.querySelector('.fa-chevron-down').style='display :none;';
+        document.querySelector('.fa-chevron-left').style='display :none;';
+        document.querySelector('.fa-chevron-right').style='display :none;';  
+        document.querySelector('.fa-chevron-up').style='display :block;';
+
+        mainDirection = 'up';
+        imageRotationFunc();
     }
 }
 
-const contactItem = (div) => {
-    div.style='color:#3700FF;'
-}
 
+
+// do not change, good for now
 document.addEventListener('mousemove',(e)=>{
-    displayDirection(e.pageX,pageWidth);
+    displayDirection(e.pageX,e.pageY,pageWidth);
     navigationIndicator.style=`top:${e.pageY}px;left:${e.pageX}px;`;
 })
 
+// do not change, good for now
 document.addEventListener('mouseleave',(e)=>{
     imgRotate.forEach(img=>{
         img.style='transform: rotateX(0deg) rotateY(0deg) translateZ(0px);margin-top:initial;'
     }) 
 })
 
-document.addEventListener('mousedown',()=>{
+document.addEventListener('click',()=>{
     switch (mainDirection){
         case 'left':
             imgRotate.forEach(img=>{
                 img.style='transform: rotateX(0deg) rotateY(-30deg) translateZ(300px);'
             })
+            skillsSection.style='transform: rotateX(0deg);';
+            homeSection.style='transform: rotateY(-90deg) translate(100%) translateZ(100px);'
         break;
-        default:
+        case 'right':
             imgRotate.forEach(img=>{
                 img.style='transform: rotateX(0deg) rotateY(30deg) translateZ(300px);'
-            })    
-        }
+            })  
+            skillsSection.style='transform: intital'
+            homeSection.style='intial'
 
-})
-document.addEventListener('mouseup',()=>{
-    switch (mainDirection){
-        case 'left':
-            imgRotate.forEach(img=>{
-                img.style='transform: rotateX(0deg) rotateY(-30deg) translateZ(200px);'
-            })
         break;
-        default:
+        case 'right':
             imgRotate.forEach(img=>{
-                img.style='transform: rotateX(0deg) rotateY(30deg) translateZ(200px);'
-            })    
+                img.style='transform: rotateX(0deg) rotateY(30deg) translateZ(300px);'
+            })  
+            skillsSection.style='transform: intital'
+            homeSection.style='intial'
+
+        break;
         }
 
 })

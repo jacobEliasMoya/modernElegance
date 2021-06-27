@@ -21,8 +21,8 @@
 }
 // DONT TOUCH
 @mixin fullScreener {
-    min-height: 100vh;
-    min-width: 100%;
+    height: 100vh;
+    width: 100%;
 }
 // DONT TOUCH
 @mixin animationInfo{
@@ -45,18 +45,53 @@
     box-sizing: border-box;
 }
 
+// scroll bars stylings
+/* width */
+::-webkit-scrollbar {
+    width: 1rem;
+  }
+
+  /* Track */
+
+::-webkit-scrollbar-track {
+    background: #3700FF;
+    transition: all ease .5s !important;
+    width: 2rem;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    border: 6px solid #3700FF;
+    background: white;
+    transition: all ease .5s !important;
+    border-radius: 1rem;
+}
+
+  
+/* Handle on hover */
+// ::-webkit-scrollbar-thumb:hover {
+// background: #3700FF;
+// cursor: pointer;
+
+// }
+
+
 body{
     font-family: 'Source Code Pro', monospace;
     position: relative;
-    overflow: hidden;
     cursor: none;
+    width: 100%;
+    min-height: 100vh;
+    height: auto;
+    perspective: 200px;
+    overflow: hidden;
+    background-color: #3700FF;
     &:hover{
         .the_beginning{
             .imgs_container{
                 img{
                     transform: rotateX(0deg) rotateY(0deg) translateZ(0px);
                     margin-top: initial;
-                
                 }
             }
         }
@@ -68,18 +103,32 @@ body{
         z-index: 100;
         color: white;
         @include absCentered();
+
         .navigationIcons{
+            @include absCentered();
             font-size: 2rem;
             display: none;
             text-shadow: 0 0 1rem white;
-
+        }
+        .fa-chevron-left{
+            transform: translate(-100%,-50%);
+        }
+        .fa-chevron-down{
+            display: none;
         }
     }
     .the_beginning{
         position: relative;
-        border-top: 1rem solid #3700FF;
-        border-right: 1rem solid #3700FF;
+        border: 1rem solid #3700FF;
         overflow: hidden;
+        padding: 1.5% 2%;
+        @include flexCol();
+        @include fullScreener();
+        justify-content: space-between;
+        background-color: black !important;
+        color: white;
+        transition: all ease 1.5s;
+        transform: rotateY(0deg) translate(0%) translateZ(0px);
 
         .imgs_container{
             @include absCentered();
@@ -133,19 +182,13 @@ body{
             }   
         }
 
-        padding: 1.5%;
-        @include flexCol();
-        @include fullScreener();
-        justify-content: space-between;
-        background-color: black !important;
-        color: white;
         .row{
             @include flexRow();
             justify-content: space-between;
             i{
                 z-index: 10000;
                 font-size: 2rem;
-                transition: all ease .5s;
+                transition: all ease .25s;
                 &:hover{
                     color: #3700FF;
                 }
@@ -154,6 +197,7 @@ body{
         .top,.middle{
             width: 100%;
         }
+
         .middle{
             font-size: 2rem;
             .design,.develop{
@@ -188,19 +232,50 @@ body{
         }
         .bottom.row{
             justify-content: space-between;
-            width: 10%;
+            width: 2.5%;
+            height: auto;
             div{
+                position: relative;
+                z-index: 1000;
                 border-radius: 100%;
                 height: .75rem;
                 width: .75rem;
                 background-color: rgba(255, 255, 255, 0.479);
-                cursor: pointer;
+                cursor: none;
                 transition: all ease .5s;
                 &:hover{
                     background-color: white;
                 }
             }
+            .centerspan{
+                display: flex;
+                justify-content: space-between;
+                flex-direction: column;
+                div{
+                    margin: 60% 0%;
+                }
+            }
+            .up{
+                background-color: white;
+            }
         }
     }
 
+    .recent_works{
+        position: absolute;
+        border-top: 1rem solid #3700FF;
+        border-bottom: 1rem solid #3700FF;
+        border-left: 1rem solid #3700FF;
+        overflow: hidden;
+        padding: 1.5%;
+        @include flexCol();
+        @include fullScreener();
+        background-color: black !important;
+        transition: all ease 1.5s;
+        color: white;
+        transform: rotateY(90deg) translate(-300%) translateZ(100px);
+        top:0;
+        left: 0;
+
+    }
 }
