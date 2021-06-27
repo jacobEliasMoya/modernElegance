@@ -103,8 +103,8 @@ body .the_beginning {
           justify-content: space-between;
   background-color: black !important;
   color: white;
-  -webkit-transition: all ease 1.5s;
-  transition: all ease 1.5s;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
   -webkit-transform: rotateY(0deg) translate(0%) translateZ(0px);
           transform: rotateY(0deg) translate(0%) translateZ(0px);
 }
@@ -295,11 +295,9 @@ body .the_beginning .bottom.row .up {
   background-color: white;
 }
 
-body .recent_works {
+body .recent_works, body .about_me {
   position: absolute;
-  border-top: 1rem solid #3700FF;
-  border-bottom: 1rem solid #3700FF;
-  border-left: 1rem solid #3700FF;
+  border: 1rem solid #3700FF;
   overflow: hidden;
   padding: 1.5%;
   display: -webkit-box;
@@ -317,13 +315,137 @@ body .recent_works {
           flex-direction: column;
   height: 100vh;
   width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   background-color: black !important;
-  -webkit-transition: all ease 1.5s;
-  transition: all ease 1.5s;
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
   color: white;
   -webkit-transform: rotateY(90deg) translate(-300%) translateZ(100px);
           transform: rotateY(90deg) translate(-300%) translateZ(100px);
   top: 0;
   left: 0;
+}
+
+body .recent_works .row, body .about_me .row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .recent_works .row i, body .about_me .row i {
+  z-index: 10000;
+  font-size: 2rem;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+}
+
+body .recent_works .row i:hover, body .about_me .row i:hover {
+  color: #3700FF;
+}
+
+body .recent_works .top, body .recent_works .middle, body .about_me .top, body .about_me .middle {
+  width: 100%;
+}
+
+body .recent_works .middle, body .about_me .middle {
+  font-size: 2rem;
+}
+
+body .recent_works .middle .design, body .recent_works .middle .develop, body .about_me .middle .design, body .about_me .middle .develop {
+  position: relative;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+}
+
+body .recent_works .middle .design::after, body .recent_works .middle .develop::after, body .about_me .middle .design::after, body .about_me .middle .develop::after {
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+  content: '';
+  position: absolute;
+  height: 0%;
+  width: 90%;
+  background-color: #3700FF;
+  left: 0;
+  bottom: -25%;
+  border-radius: .5rem;
+}
+
+body .recent_works .middle .selected::after, body .about_me .middle .selected::after {
+  content: '';
+  position: absolute;
+  height: 10%;
+  width: 90%;
+  background-color: #3700FF;
+  left: 0;
+  bottom: -25%;
+}
+
+body .recent_works .bottom.row, body .about_me .bottom.row {
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 2.5%;
+  height: auto;
+}
+
+body .recent_works .bottom.row div, body .about_me .bottom.row div {
+  position: relative;
+  z-index: 1000;
+  border-radius: 100%;
+  height: .75rem;
+  width: .75rem;
+  background-color: rgba(255, 255, 255, 0.479);
+  cursor: none;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+body .recent_works .bottom.row div:hover, body .about_me .bottom.row div:hover {
+  background-color: white;
+}
+
+body .recent_works .bottom.row .centerspan, body .about_me .bottom.row .centerspan {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .recent_works .bottom.row .centerspan div, body .about_me .bottom.row .centerspan div {
+  margin: 60% 0%;
+}
+
+body .recent_works .bottom.row .left, body .about_me .bottom.row .left {
+  background-color: white;
+}
+
+body .about_me {
+  -webkit-transform: rotateX(90deg) translate(0%, 150%) translateZ(200px);
+          transform: rotateX(90deg) translate(0%, 150%) translateZ(200px);
+}
+
+body .about_me .row .down {
+  background-color: white;
 }
 /*# sourceMappingURL=styles.css.map */
