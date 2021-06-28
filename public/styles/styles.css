@@ -30,6 +30,7 @@
 /* Handle on hover */
 body {
   font-family: 'Source Code Pro', monospace;
+  font-family: 'Rock Salt', cursive;
   position: relative;
   cursor: none;
   width: 100%;
@@ -49,7 +50,7 @@ body:hover .the_beginning .imgs_container img {
 
 body .navigationContainer {
   position: absolute;
-  z-index: 100;
+  z-index: 2;
   color: white;
   position: absolute;
   left: 50%;
@@ -80,6 +81,7 @@ body .navigationContainer .fa-chevron-down {
 
 body .the_beginning {
   position: relative;
+  z-index: 1;
   border: 1rem solid #3700FF;
   overflow: hidden;
   padding: 1.5% 2%;
@@ -103,8 +105,8 @@ body .the_beginning {
           justify-content: space-between;
   background-color: black !important;
   color: white;
-  -webkit-transition: all ease 1s;
-  transition: all ease 1s;
+  -webkit-transition: all ease 1.5s;
+  transition: all ease 1.5s;
   -webkit-transform: rotateY(0deg) translate(0%) translateZ(0px);
           transform: rotateY(0deg) translate(0%) translateZ(0px);
 }
@@ -203,14 +205,11 @@ body .the_beginning .row {
 }
 
 body .the_beginning .row i {
-  z-index: 10000;
+  position: relative;
+  z-index: 1000;
   font-size: 2rem;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
-}
-
-body .the_beginning .row i:hover {
-  color: #3700FF;
 }
 
 body .the_beginning .top, body .the_beginning .middle {
@@ -254,7 +253,7 @@ body .the_beginning .bottom.row {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 2.5%;
+  width: 3%;
   height: auto;
 }
 
@@ -288,14 +287,14 @@ body .the_beginning .bottom.row .centerspan {
 }
 
 body .the_beginning .bottom.row .centerspan div {
-  margin: 60% 0%;
+  margin: 20% 0%;
 }
 
-body .the_beginning .bottom.row .up {
+body .the_beginning .bottom.row .mid {
   background-color: white;
 }
 
-body .recent_works, body .about_me {
+body .recent_works, body .about_me, body .contact_me {
   position: absolute;
   border: 1rem solid #3700FF;
   overflow: hidden;
@@ -319,8 +318,8 @@ body .recent_works, body .about_me {
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: black !important;
-  -webkit-transition: all ease 1s;
-  transition: all ease 1s;
+  -webkit-transition: all ease 1.5s;
+  transition: all ease 1.5s;
   color: white;
   -webkit-transform: rotateY(90deg) translate(-300%) translateZ(100px);
           transform: rotateY(90deg) translate(-300%) translateZ(100px);
@@ -328,7 +327,7 @@ body .recent_works, body .about_me {
   left: 0;
 }
 
-body .recent_works .row, body .about_me .row {
+body .recent_works .row, body .about_me .row, body .contact_me .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -347,32 +346,31 @@ body .recent_works .row, body .about_me .row {
           justify-content: space-between;
 }
 
-body .recent_works .row i, body .about_me .row i {
-  z-index: 10000;
+body .recent_works .row i, body .about_me .row i, body .contact_me .row i {
   font-size: 2rem;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
 }
 
-body .recent_works .row i:hover, body .about_me .row i:hover {
+body .recent_works .row i:hover, body .about_me .row i:hover, body .contact_me .row i:hover {
   color: #3700FF;
 }
 
-body .recent_works .top, body .recent_works .middle, body .about_me .top, body .about_me .middle {
+body .recent_works .top, body .recent_works .middle, body .about_me .top, body .about_me .middle, body .contact_me .top, body .contact_me .middle {
   width: 100%;
 }
 
-body .recent_works .middle, body .about_me .middle {
+body .recent_works .middle, body .about_me .middle, body .contact_me .middle {
   font-size: 2rem;
 }
 
-body .recent_works .middle .design, body .recent_works .middle .develop, body .about_me .middle .design, body .about_me .middle .develop {
+body .recent_works .middle .design, body .recent_works .middle .develop, body .about_me .middle .design, body .about_me .middle .develop, body .contact_me .middle .design, body .contact_me .middle .develop {
   position: relative;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
 }
 
-body .recent_works .middle .design::after, body .recent_works .middle .develop::after, body .about_me .middle .design::after, body .about_me .middle .develop::after {
+body .recent_works .middle .design::after, body .recent_works .middle .develop::after, body .about_me .middle .design::after, body .about_me .middle .develop::after, body .contact_me .middle .design::after, body .contact_me .middle .develop::after {
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
   content: '';
@@ -385,7 +383,7 @@ body .recent_works .middle .design::after, body .recent_works .middle .develop::
   border-radius: .5rem;
 }
 
-body .recent_works .middle .selected::after, body .about_me .middle .selected::after {
+body .recent_works .middle .selected::after, body .about_me .middle .selected::after, body .contact_me .middle .selected::after {
   content: '';
   position: absolute;
   height: 10%;
@@ -395,15 +393,15 @@ body .recent_works .middle .selected::after, body .about_me .middle .selected::a
   bottom: -25%;
 }
 
-body .recent_works .bottom.row, body .about_me .bottom.row {
+body .recent_works .bottom.row, body .about_me .bottom.row, body .contact_me .bottom.row {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  width: 2.5%;
+  width: 3%;
   height: auto;
 }
 
-body .recent_works .bottom.row div, body .about_me .bottom.row div {
+body .recent_works .bottom.row div, body .about_me .bottom.row div, body .contact_me .bottom.row div {
   position: relative;
   z-index: 1000;
   border-radius: 100%;
@@ -415,11 +413,11 @@ body .recent_works .bottom.row div, body .about_me .bottom.row div {
   transition: all ease .5s;
 }
 
-body .recent_works .bottom.row div:hover, body .about_me .bottom.row div:hover {
+body .recent_works .bottom.row div:hover, body .about_me .bottom.row div:hover, body .contact_me .bottom.row div:hover {
   background-color: white;
 }
 
-body .recent_works .bottom.row .centerspan, body .about_me .bottom.row .centerspan {
+body .recent_works .bottom.row .centerspan, body .about_me .bottom.row .centerspan, body .contact_me .bottom.row .centerspan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,12 +430,16 @@ body .recent_works .bottom.row .centerspan, body .about_me .bottom.row .centersp
           flex-direction: column;
 }
 
-body .recent_works .bottom.row .centerspan div, body .about_me .bottom.row .centerspan div {
-  margin: 60% 0%;
+body .recent_works .bottom.row .centerspan div, body .about_me .bottom.row .centerspan div, body .contact_me .bottom.row .centerspan div {
+  margin: 20% 0%;
 }
 
-body .recent_works .bottom.row .left, body .about_me .bottom.row .left {
+body .recent_works .bottom.row .left, body .about_me .bottom.row .left, body .contact_me .bottom.row .left {
   background-color: white;
+}
+
+body .recent_works .bottom.row .mid, body .about_me .bottom.row .mid, body .contact_me .bottom.row .mid {
+  background-color: rgba(255, 255, 255, 0.479) !important;
 }
 
 body .about_me {
@@ -446,6 +448,39 @@ body .about_me {
 }
 
 body .about_me .row .down {
-  background-color: white;
+  background-color: white !important;
+}
+
+body .about_me .row .left {
+  background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .about_me .row .up {
+  background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .about_me .row .right {
+  background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .contact_me {
+  -webkit-transform: rotateY(-90deg) translate(300%) translateZ(100px);
+          transform: rotateY(-90deg) translate(300%) translateZ(100px);
+}
+
+body .contact_me .row .down {
+  background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .contact_me .row .left {
+  background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .contact_me .row .up {
+  background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .contact_me .row .right {
+  background-color: white !important;
 }
 /*# sourceMappingURL=styles.css.map */
