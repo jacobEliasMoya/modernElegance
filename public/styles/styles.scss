@@ -79,6 +79,7 @@
 body{
     font-family: 'Source Code Pro', monospace;
     font-family: 'Rock Salt', cursive;
+    font-family: 'Abril Fatface', cursive;
     position: relative;
     cursor: none;
     width: 100%;
@@ -198,13 +199,15 @@ body{
         }
         .top,.middle{
             width: 100%;
+            
         }
 
         .middle{
-            font-size: 2rem;
+            font-size: 3rem;
             .design,.develop{
                 position: relative;
                 transition: all ease .25s;
+                letter-spacing: 2px;
                 &::after{
                     transition: all ease .25s;
                     content: '';
@@ -215,6 +218,9 @@ body{
                     left: 0;
                     bottom: -25%;
                     border-radius: .5rem;
+                }
+                &::first-letter{
+                    font-size: 5rem;
                 }
             }
 
@@ -290,9 +296,16 @@ body{
         }
         .top,.middle{
             width: 100%;
-            // h2{
-            //     background: #3700FF;
-            // }
+            justify-content: flex-end;
+            h2{
+                text-align: center;
+                position: absolute;
+                @include absCentered();
+                font-size: 6rem;
+                span{
+                    font-size: 3rem;
+                }
+            }
         }
 
         .middle{

@@ -31,6 +31,7 @@
 body {
   font-family: 'Source Code Pro', monospace;
   font-family: 'Rock Salt', cursive;
+  font-family: 'Abril Fatface', cursive;
   position: relative;
   cursor: none;
   width: 100%;
@@ -217,13 +218,14 @@ body .the_beginning .top, body .the_beginning .middle {
 }
 
 body .the_beginning .middle {
-  font-size: 2rem;
+  font-size: 3rem;
 }
 
 body .the_beginning .middle .design, body .the_beginning .middle .develop {
   position: relative;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
+  letter-spacing: 2px;
 }
 
 body .the_beginning .middle .design::after, body .the_beginning .middle .develop::after {
@@ -237,6 +239,10 @@ body .the_beginning .middle .design::after, body .the_beginning .middle .develop
   left: 0;
   bottom: -25%;
   border-radius: .5rem;
+}
+
+body .the_beginning .middle .design::first-letter, body .the_beginning .middle .develop::first-letter {
+  font-size: 5rem;
 }
 
 body .the_beginning .middle .selected::after {
@@ -358,6 +364,24 @@ body .recent_works .row i:hover, body .about_me .row i:hover, body .contact_me .
 
 body .recent_works .top, body .recent_works .middle, body .about_me .top, body .about_me .middle, body .contact_me .top, body .contact_me .middle {
   width: 100%;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+
+body .recent_works .top h2, body .recent_works .middle h2, body .about_me .top h2, body .about_me .middle h2, body .contact_me .top h2, body .contact_me .middle h2 {
+  text-align: center;
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  font-size: 6rem;
+}
+
+body .recent_works .top h2 span, body .recent_works .middle h2 span, body .about_me .top h2 span, body .about_me .middle h2 span, body .contact_me .top h2 span, body .contact_me .middle h2 span {
+  font-size: 3rem;
 }
 
 body .recent_works .middle, body .about_me .middle, body .contact_me .middle {
