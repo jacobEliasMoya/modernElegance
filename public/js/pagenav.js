@@ -202,3 +202,10 @@ document.addEventListener('click',()=>{
             return;
     }
 })
+
+window.addEventListener('load',()=>{
+    setTimeout(() => {
+        document.querySelector('.design');
+        document.querySelector('.develop');
+    }, 1000);
+})

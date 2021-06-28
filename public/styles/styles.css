@@ -203,6 +203,8 @@ body .the_beginning .row {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -webkit-perspective: 500px;
+          perspective: 500px;
 }
 
 body .the_beginning .row i {
@@ -226,6 +228,8 @@ body .the_beginning .middle .design, body .the_beginning .middle .develop {
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
   letter-spacing: 2px;
+  -webkit-transform: translateZ(10px);
+          transform: translateZ(10px);
 }
 
 body .the_beginning .middle .design::after, body .the_beginning .middle .develop::after {
@@ -370,6 +374,8 @@ body .recent_works .top, body .recent_works .middle, body .about_me .top, body .
 }
 
 body .recent_works .top h2, body .recent_works .middle h2, body .about_me .top h2, body .about_me .middle h2, body .contact_me .top h2, body .contact_me .middle h2 {
+  -webkit-transform: translateZ(10px);
+          transform: translateZ(10px);
   text-align: center;
   position: absolute;
   position: absolute;
