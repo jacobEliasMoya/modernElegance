@@ -88,7 +88,7 @@ body{
     perspective: 200px;
     overflow: hidden;
     background-color: #3700FF;
-    background: radial-gradient(circle,black,#3700FF);
+    // background: radial-gradient(circle,black,#3700FF);
     &:hover{
         .the_beginning{
             .imgs_container{
@@ -130,7 +130,7 @@ body{
     .the_beginning{
         position: relative;
         z-index: 1;
-        border: 1rem solid #3700FF;
+        border: 1vw solid #3700FF;
         overflow: hidden;
         padding: 1.5% 2%;
         @include flexCol();
@@ -200,11 +200,18 @@ body{
             transform: translateZ(10px);
 
             i{
-                position: relative;
-                z-index: 1000;
                 font-size: 2rem;
-                transition: all ease .25s;
+                transition: all ease .5s;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                border-top-left-radius: 50%;
+                padding: 1%;
+                transform: translate(45%,-30%);
+                &:hover{
+                    background: #3700FF;
+                }
             }
+
         }
         .top,.middle{
             width: 100%;
@@ -218,7 +225,7 @@ body{
                 position: relative;
                 transition: all ease .25s;
                 letter-spacing: 2px;
-                transform: translateZ(-10px);
+                transform: translateZ(-1px);
                 &::after{
                     transition: all ease .25s;
                     content: '';
@@ -280,10 +287,10 @@ body{
         }
     }
 
-    .recent_works,.about_me,.contact_me,.skills_section{
+    .recent_works,.about_me,.contact_me,.skills_section,.nav_section{
         position: absolute;
-        border: 1rem solid #3700FF;
-        overflow: hidden;
+        border: 1vw solid #3700FF;
+        overflow: visible;
         padding: 1.5%;
         @include flexCol();
         @include fullScreener();
@@ -299,8 +306,12 @@ body{
             justify-content: space-between;
             i{
                 font-size: 2rem;
-                transition: all ease .25s;
-                border-radius: 100%;
+                transition: all ease .5s;
+                border-bottom-left-radius: 50%;
+                border-bottom-right-radius: 50%;
+                border-top-left-radius: 50%;
+                padding: 1%;
+                transform: translate(30%,-30%);
                 &:hover{
                     background: #3700FF;
                 }
@@ -327,12 +338,36 @@ body{
                 font-size: 1.7vw;
                 text-align: center;
                 transform: translate(-50%,100%) translateZ(10px);
+                a{
+                    transition: all ease .5s;
+                    color: white;
+                    text-decoration:none;
+                    position: relative;
+                    text-align: center;
+                    padding: 0% 1%;
+                    &::after{
+                        transition: all ease .5s;
+                        content: '';
+                        position:absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 101%;
+                        height: 8%;
+                        background: #3700ff;
+                        z-index: -1;
+                    }
+                    &:hover{
+                        &::after{
+                            height: 90%;
+                        }
+                    }
+                }
             }
         }
 
         .middle{
             font-size: 2rem;
-            perspective: 1000px;
+            perspective: 75vw;
             a{
                 transition: all ease 1s;
                 cursor: none;
@@ -365,6 +400,8 @@ body{
                 }
                 &:hover{
                     background-size: 150% 150%;
+                    border-bottom: .25rem solid white;
+
                     div{
                         opacity: 1;
                     }
@@ -459,6 +496,14 @@ body{
                 background-color: rgba(255, 255, 255, 0.479) !important;
             }
         }
+    }
+
+    .nav_section{
+        z-index: 1;
+        transform: rotateX(0deg) translate(0) translateZ(100vh);
+        position: absolute;
+        height: 100vh;
+        width: 100%;
     }
     // leave alone for now
     .about_me{

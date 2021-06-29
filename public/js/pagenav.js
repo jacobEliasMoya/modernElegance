@@ -1,5 +1,4 @@
 const navigationIndicator = document.querySelector('.navigationContainer');
-const contactedItem = document.querySelectorAll('.top i');
 const imgRotate = document.querySelectorAll('.imgs_container img');
 const prevLinks = document.querySelectorAll('.middle a');
 const navIcons =  document.querySelectorAll('.navigationIcons');
@@ -9,6 +8,7 @@ const homeSection = document.querySelector('.the_beginning');
 const aboutSection = document.querySelector('.about_me');
 const contactSection = document.querySelector('.contact_me');
 const skillsSection = document.querySelector('.skills_section');
+const navSection = document.querySelector('.nav_section');
 
 
 const pageWidth = window.innerWidth;
