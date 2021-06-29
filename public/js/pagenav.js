@@ -120,11 +120,8 @@ document.addEventListener('mouseleave',(e)=>{
 })
 
 prevLinks.forEach(link=>{
-    link.addEventListener('mouseover',()=>{
-        navIcons.forEach(icon=>{
-            icon.style.color='red !important';
-            console.log(icon)
-        })
+    link.addEventListener('click',()=>{
+        mainDirection='left';
     })
 })
 

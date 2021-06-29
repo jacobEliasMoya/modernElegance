@@ -41,6 +41,7 @@ body {
           perspective: 200px;
   overflow: hidden;
   background-color: #3700FF;
+  background: radial-gradient(circle, black, #3700FF);
 }
 
 body:hover .the_beginning .imgs_container img {
@@ -232,8 +233,8 @@ body .the_beginning .middle .design, body .the_beginning .middle .develop {
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
   letter-spacing: 2px;
-  -webkit-transform: translateZ(10px);
-          transform: translateZ(10px);
+  -webkit-transform: translateZ(-10px);
+          transform: translateZ(-10px);
 }
 
 body .the_beginning .middle .design::after, body .the_beginning .middle .develop::after {
@@ -446,6 +447,8 @@ body .recent_works .middle a, body .about_me .middle a, body .contact_me .middle
   border-bottom: .25rem solid #3700FF;
   background-position: center;
   cursor: pointer;
+  -webkit-perspective: 10px;
+          perspective: 10px;
 }
 
 body .recent_works .middle a div, body .about_me .middle a div, body .contact_me .middle a div, body .skills_section .middle a div {
@@ -499,8 +502,8 @@ body .recent_works .middle .varepprev, body .about_me .middle .varepprev, body .
   height: 13vw;
   width: 23vw;
   z-index: 0;
-  -webkit-transform: translate(90%, 50%);
-          transform: translate(90%, 50%);
+  -webkit-transform: translate(90%, 50%) rotateY(0deg) rotateX(0deg);
+          transform: translate(90%, 50%) rotateY(0deg) rotateX(0deg);
   background-image: url(/public/images/varepPreview.PNG);
 }
 
