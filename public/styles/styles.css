@@ -550,8 +550,8 @@ body .recent_works .middle .varepprev, body .about_me .middle .varepprev, body .
   height: 13vw;
   width: 23vw;
   z-index: 0;
-  -webkit-transform: translate(90%, 50%) rotateY(0deg) rotateX(0deg);
-          transform: translate(90%, 50%) rotateY(0deg) rotateX(0deg);
+  -webkit-transform: translate(90%, 45%) rotateY(0deg) rotateX(0deg);
+          transform: translate(90%, 45%) rotateY(0deg) rotateX(0deg);
   background-image: url(/public/images/varepPreview.PNG);
 }
 
@@ -606,8 +606,8 @@ body .recent_works .middle .paintedsite, body .about_me .middle .paintedsite, bo
   height: 13vw;
   width: 23vw;
   z-index: 0;
-  -webkit-transform: translate(-190%, 50%);
-          transform: translate(-190%, 50%);
+  -webkit-transform: translate(-190%, 45%);
+          transform: translate(-190%, 45%);
   background-image: url(/public/images/animateprev.PNG);
 }
 

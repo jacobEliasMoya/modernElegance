@@ -49,8 +49,8 @@ projectLinks.forEach(link=>{
 
 projectLinks.forEach(link=>{
     link.addEventListener('mouseleave',()=>{
-        document.querySelector('.varepprev').style= 'transform: translate(90%,50%) rotateY(0deg) rotateX(0deg);'
-        document.querySelector('.paintedsite').style= 'transform: translate(-190%,50%) rotateY(0deg) rotateX(0deg);'
+        document.querySelector('.varepprev').style= 'transform: translate(90%,45%) rotateY(0deg) rotateX(0deg);'
+        document.querySelector('.paintedsite').style= 'transform: translate(-190%,45%) rotateY(0deg) rotateX(0deg);'
         document.querySelector('.intsite').style= 'transform:translate(-190%,-150%) rotateY(0deg) rotateX(0deg);'
         document.querySelector('.reactsite').style= 'transform:translate(90%,-150%) rotateY(0deg) rotateX(0deg);'
         document.querySelector('.gameprev').style= 'transform:translate(-50%,-150%) rotateY(0deg) rotateX(0deg);'
