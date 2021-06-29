@@ -16,17 +16,33 @@ const untranslate = () => {
                 selectedDirection='center'
             },1500)
         break;
-        case 'left':
-            console.log(selectedDirection)
-            break;
-        case 'right':
-            console.log(selectedDirection)
+        case 'leftback':
+            workSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+            navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+            setTimeout(()=>{
+                selectedDirection='left'
+            },1500)
         break;
-        case 'down':
-            console.log(selectedDirection)
-            break;
-        case 'up':
-            console.log(selectedDirection)
+        case 'rightback':
+            contactSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+            navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+            setTimeout(()=>{
+                selectedDirection='right'
+            },1500)        
+        break;
+        case 'downback':
+            aboutSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+            navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+            setTimeout(()=>{
+                selectedDirection='down'
+            },1500)            
+        break;
+        case 'upback':
+            skillsSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+            navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+            setTimeout(()=>{
+                selectedDirection='up'
+            },1500)        
         break;
         default:
             return;
@@ -42,16 +58,24 @@ const backTranslate = () =>{
 
         break;
         case 'left':
-            console.log(selectedDirection)
-            break;
+            workSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-100vh)';
+            navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+            selectedDirection='leftback';
+        break;
         case 'right':
-            console.log(selectedDirection)
+            contactSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-100vh)';
+            navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+            selectedDirection='rightback'
         break;
         case 'down':
-            console.log(selectedDirection)
-            break;
+            aboutSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-100vh)';
+            navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+            selectedDirection='downback'
+        break;
         case 'up':
-            console.log(selectedDirection)
+            skillsSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-100vh)';
+            navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+            selectedDirection='upback';
         break;
         default:
             return;

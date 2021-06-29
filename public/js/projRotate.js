@@ -36,8 +36,6 @@ const linkrotate = () =>{
         document.querySelector('.intsite').style= 'transform:translate(-190%,-150%) rotateY(70deg) rotateX(-30deg);'
         document.querySelector('.reactsite').style= 'transform:translate(90%,-150%) rotateX(-45deg);'
         document.querySelector('.gameprev').style= 'transform:translate(-50%,-150%) rotateY(50deg) rotateX(-50deg);'
-
-
     }
 }
 
@@ -56,6 +54,5 @@ projectLinks.forEach(link=>{
         document.querySelector('.intsite').style= 'transform:translate(-190%,-150%) rotateY(0deg) rotateX(0deg);'
         document.querySelector('.reactsite').style= 'transform:translate(90%,-150%) rotateY(0deg) rotateX(0deg);'
         document.querySelector('.gameprev').style= 'transform:translate(-50%,-150%) rotateY(0deg) rotateX(0deg);'
-
     })
 })

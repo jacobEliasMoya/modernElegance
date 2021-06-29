@@ -67,15 +67,6 @@
     border-radius: 1rem;
 }
 
-  
-/* Handle on hover */
-// ::-webkit-scrollbar-thumb:hover {
-// background: #3700FF;
-// cursor: pointer;
-
-// }
-
-
 body{
     font-family: 'Source Code Pro', monospace;
     font-family: 'Rock Salt', cursive;
@@ -121,10 +112,7 @@ body{
         .fa-chevron-down{
             display: none;
         }
-        // .fa{
-        //     display: none !important;
 
-        // }
     }
 
     .the_beginning{
@@ -206,10 +194,13 @@ body{
                 border-bottom-right-radius: 50%;
                 border-top-left-radius: 50%;
                 padding: 1%;
-                transform: translate(45%,-30%);
+                transform: translate(45%,-30%) translateZ(1px);
                 &:hover{
                     background: #3700FF;
                 }
+            }
+            h2{
+                transform: translate(-10%,-75%) translateZ(1px);
             }
 
         }
@@ -261,6 +252,7 @@ body{
             width: 3%;
             height: auto;
             div{
+                transform: translateZ(1px);
                 position: relative;
                 z-index: 1000;
                 border-radius: 100%;
@@ -277,6 +269,7 @@ body{
                 display: flex;
                 justify-content: space-between;
                 flex-direction: column;
+                transform: translateZ(1px);
                 div{
                     margin: 20% 0%;
                 }
@@ -504,6 +497,8 @@ body{
         position: absolute;
         height: 100vh;
         width: 100%;
+        opacity: .9;
+
     }
     // leave alone for now
     .about_me{

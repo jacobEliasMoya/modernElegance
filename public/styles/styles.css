@@ -27,7 +27,6 @@
   border-radius: 1rem;
 }
 
-/* Handle on hover */
 body {
   font-family: 'Source Code Pro', monospace;
   font-family: 'Rock Salt', cursive;
@@ -219,12 +218,17 @@ body .the_beginning .row i {
   border-bottom-right-radius: 50%;
   border-top-left-radius: 50%;
   padding: 1%;
-  -webkit-transform: translate(45%, -30%);
-          transform: translate(45%, -30%);
+  -webkit-transform: translate(45%, -30%) translateZ(1px);
+          transform: translate(45%, -30%) translateZ(1px);
 }
 
 body .the_beginning .row i:hover {
   background: #3700FF;
+}
+
+body .the_beginning .row h2 {
+  -webkit-transform: translate(-10%, -75%) translateZ(1px);
+          transform: translate(-10%, -75%) translateZ(1px);
 }
 
 body .the_beginning .top, body .the_beginning .middle {
@@ -280,6 +284,8 @@ body .the_beginning .bottom.row {
 }
 
 body .the_beginning .bottom.row div {
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px);
   position: relative;
   z-index: 1000;
   border-radius: 100%;
@@ -306,6 +312,8 @@ body .the_beginning .bottom.row .centerspan {
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+  -webkit-transform: translateZ(1px);
+          transform: translateZ(1px);
 }
 
 body .the_beginning .bottom.row .centerspan div {
@@ -664,6 +672,7 @@ body .nav_section {
   position: absolute;
   height: 100vh;
   width: 100%;
+  opacity: .9;
 }
 
 body .about_me {
