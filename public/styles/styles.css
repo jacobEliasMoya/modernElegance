@@ -33,8 +33,8 @@ body {
   font-family: 'Rock Salt', cursive;
   font-family: 'Abril Fatface', cursive;
   position: relative;
-  cursor: none;
   width: 100%;
+  cursor: none;
   min-height: 100vh;
   height: auto;
   -webkit-perspective: 200px;
@@ -52,12 +52,13 @@ body:hover .the_beginning .imgs_container img {
 body .navigationContainer {
   position: absolute;
   z-index: 2;
-  color: white;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+  -webkit-transition: none;
+  transition: none;
 }
 
 body .navigationContainer .navigationIcons {
@@ -69,6 +70,7 @@ body .navigationContainer .navigationIcons {
   font-size: 2rem;
   display: none;
   text-shadow: 0 0 1rem white;
+  color: white;
 }
 
 body .navigationContainer .fa-chevron-left {
@@ -205,6 +207,8 @@ body .the_beginning .row {
           justify-content: space-between;
   -webkit-perspective: 500px;
           perspective: 500px;
+  -webkit-transform: translateZ(10px);
+          transform: translateZ(10px);
 }
 
 body .the_beginning .row i {
@@ -304,7 +308,7 @@ body .the_beginning .bottom.row .mid {
   background-color: white;
 }
 
-body .recent_works, body .about_me, body .contact_me {
+body .recent_works, body .about_me, body .contact_me, body .skills_section {
   position: absolute;
   border: 1rem solid #3700FF;
   overflow: hidden;
@@ -337,7 +341,7 @@ body .recent_works, body .about_me, body .contact_me {
   left: 0;
 }
 
-body .recent_works .row, body .about_me .row, body .contact_me .row {
+body .recent_works .row, body .about_me .row, body .contact_me .row, body .skills_section .row {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -356,24 +360,25 @@ body .recent_works .row, body .about_me .row, body .contact_me .row {
           justify-content: space-between;
 }
 
-body .recent_works .row i, body .about_me .row i, body .contact_me .row i {
+body .recent_works .row i, body .about_me .row i, body .contact_me .row i, body .skills_section .row i {
   font-size: 2rem;
   -webkit-transition: all ease .25s;
   transition: all ease .25s;
+  border-radius: 100%;
 }
 
-body .recent_works .row i:hover, body .about_me .row i:hover, body .contact_me .row i:hover {
-  color: #3700FF;
+body .recent_works .row i:hover, body .about_me .row i:hover, body .contact_me .row i:hover, body .skills_section .row i:hover {
+  background: #3700FF;
 }
 
-body .recent_works .top, body .recent_works .middle, body .about_me .top, body .about_me .middle, body .contact_me .top, body .contact_me .middle {
+body .recent_works .top, body .recent_works .middle, body .about_me .top, body .about_me .middle, body .contact_me .top, body .contact_me .middle, body .skills_section .top, body .skills_section .middle {
   width: 100%;
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
 }
 
-body .recent_works .top h2, body .recent_works .middle h2, body .about_me .top h2, body .about_me .middle h2, body .contact_me .top h2, body .contact_me .middle h2 {
+body .recent_works .top h2, body .recent_works .middle h2, body .about_me .top h2, body .about_me .middle h2, body .contact_me .top h2, body .contact_me .middle h2, body .skills_section .top h2, body .skills_section .middle h2 {
   -webkit-transform: translateZ(10px);
           transform: translateZ(10px);
   text-align: center;
@@ -384,54 +389,191 @@ body .recent_works .top h2, body .recent_works .middle h2, body .about_me .top h
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
   font-size: 6rem;
+  z-index: 10;
 }
 
-body .recent_works .top h2 span, body .recent_works .middle h2 span, body .about_me .top h2 span, body .about_me .middle h2 span, body .contact_me .top h2 span, body .contact_me .middle h2 span {
+body .recent_works .top h2 span, body .recent_works .middle h2 span, body .about_me .top h2 span, body .about_me .middle h2 span, body .contact_me .top h2 span, body .contact_me .middle h2 span, body .skills_section .top h2 span, body .skills_section .middle h2 span {
   font-size: 3rem;
 }
 
-body .recent_works .middle, body .about_me .middle, body .contact_me .middle {
+body .recent_works .top p, body .recent_works .middle p, body .about_me .top p, body .about_me .middle p, body .contact_me .top p, body .contact_me .middle p, body .skills_section .top p, body .skills_section .middle p {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  width: 30%;
+  font-size: 1.7vw;
+  text-align: center;
+  -webkit-transform: translate(-50%, 100%) translateZ(10px);
+          transform: translate(-50%, 100%) translateZ(10px);
+}
+
+body .recent_works .middle, body .about_me .middle, body .contact_me .middle, body .skills_section .middle {
   font-size: 2rem;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
 }
 
-body .recent_works .middle .design, body .recent_works .middle .develop, body .about_me .middle .design, body .about_me .middle .develop, body .contact_me .middle .design, body .contact_me .middle .develop {
-  position: relative;
-  -webkit-transition: all ease .25s;
-  transition: all ease .25s;
-}
-
-body .recent_works .middle .design::after, body .recent_works .middle .develop::after, body .about_me .middle .design::after, body .about_me .middle .develop::after, body .contact_me .middle .design::after, body .contact_me .middle .develop::after {
-  -webkit-transition: all ease .25s;
-  transition: all ease .25s;
-  content: '';
+body .recent_works .middle a, body .about_me .middle a, body .contact_me .middle a, body .skills_section .middle a {
+  -webkit-transition: all ease 1s;
+  transition: all ease 1s;
+  cursor: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: absolute;
-  height: 0%;
-  width: 90%;
-  background-color: #3700FF;
-  left: 0;
-  bottom: -25%;
-  border-radius: .5rem;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  text-decoration: none;
+  text-align: center;
+  overflow: hidden;
+  background-size: 100% 100%;
+  color: white;
+  border-bottom: .25rem solid #3700FF;
+  background-position: center;
+  cursor: pointer;
 }
 
-body .recent_works .middle .selected::after, body .about_me .middle .selected::after, body .contact_me .middle .selected::after {
-  content: '';
+body .recent_works .middle a div, body .about_me .middle a div, body .contact_me .middle a div, body .skills_section .middle a div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  background: #3700ffab !important;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  height: inherit;
+  width: 100%;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  opacity: 0;
+}
+
+body .recent_works .middle a div h1, body .recent_works .middle a div h6, body .about_me .middle a div h1, body .about_me .middle a div h6, body .contact_me .middle a div h1, body .contact_me .middle a div h6, body .skills_section .middle a div h1, body .skills_section .middle a div h6 {
+  text-shadow: 0 0 1rem black;
+}
+
+body .recent_works .middle a div h1, body .about_me .middle a div h1, body .contact_me .middle a div h1, body .skills_section .middle a div h1 {
+  font-size: 3vw;
+  line-height: 1;
+}
+
+body .recent_works .middle a:hover, body .about_me .middle a:hover, body .contact_me .middle a:hover, body .skills_section .middle a:hover {
+  background-size: 150% 150%;
+}
+
+body .recent_works .middle a:hover div, body .about_me .middle a:hover div, body .contact_me .middle a:hover div, body .skills_section .middle a:hover div {
+  opacity: 1;
+}
+
+body .recent_works .middle .varepprev, body .about_me .middle .varepprev, body .contact_me .middle .varepprev, body .skills_section .middle .varepprev {
   position: absolute;
-  height: 10%;
-  width: 90%;
-  background-color: #3700FF;
-  left: 0;
-  bottom: -25%;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 13vw;
+  width: 23vw;
+  z-index: 0;
+  -webkit-transform: translate(90%, 50%);
+          transform: translate(90%, 50%);
+  background-image: url(/public/images/varepPreview.PNG);
 }
 
-body .recent_works .bottom.row, body .about_me .bottom.row, body .contact_me .bottom.row {
+body .recent_works .middle .varepprev div, body .about_me .middle .varepprev div, body .contact_me .middle .varepprev div, body .skills_section .middle .varepprev div {
+  background: #305fb1c4;
+}
+
+body .recent_works .middle .reactsite, body .about_me .middle .reactsite, body .contact_me .middle .reactsite, body .skills_section .middle .reactsite {
+  background-image: url(/public/images/reactsite.PNG);
+  height: 13vw;
+  width: 23vw;
+  -webkit-transform: translate(90%, -150%);
+          transform: translate(90%, -150%);
+}
+
+body .recent_works .middle .reactsite div, body .about_me .middle .reactsite div, body .contact_me .middle .reactsite div, body .skills_section .middle .reactsite div {
+  background: rgba(111, 26, 160, 0.671);
+}
+
+body .recent_works .middle .intsite, body .about_me .middle .intsite, body .contact_me .middle .intsite, body .skills_section .middle .intsite {
+  background-image: url(/public/images/interactiveprev.PNG);
+  height: 13vw;
+  width: 23vw;
+  -webkit-transform: translate(-190%, -150%);
+          transform: translate(-190%, -150%);
+  background-size: 101% 101%;
+}
+
+body .recent_works .middle .intsite div, body .about_me .middle .intsite div, body .contact_me .middle .intsite div, body .skills_section .middle .intsite div {
+  background: rgba(0, 255, 0, 0.178);
+}
+
+body .recent_works .middle .gameprev, body .about_me .middle .gameprev, body .contact_me .middle .gameprev, body .skills_section .middle .gameprev {
+  background-image: url(/public/images/gameprev.PNG);
+  height: 13vw;
+  width: 13vw;
+  background-size: 101% 101%;
+  -webkit-transform: translate(-50%, -150%);
+          transform: translate(-50%, -150%);
+}
+
+body .recent_works .middle .gameprev div, body .about_me .middle .gameprev div, body .contact_me .middle .gameprev div, body .skills_section .middle .gameprev div {
+  background: rgba(0, 0, 255, 0.308);
+}
+
+body .recent_works .middle .paintedsite, body .about_me .middle .paintedsite, body .contact_me .middle .paintedsite, body .skills_section .middle .paintedsite {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 13vw;
+  width: 23vw;
+  z-index: 0;
+  -webkit-transform: translate(-190%, 50%);
+          transform: translate(-190%, 50%);
+  background-image: url(/public/images/animateprev.PNG);
+}
+
+body .recent_works .middle .paintedsite div, body .about_me .middle .paintedsite div, body .contact_me .middle .paintedsite div, body .skills_section .middle .paintedsite div {
+  background: #585858c4;
+}
+
+body .recent_works .bottom.row, body .about_me .bottom.row, body .contact_me .bottom.row, body .skills_section .bottom.row {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
   width: 3%;
   height: auto;
+  position: relative;
 }
 
-body .recent_works .bottom.row div, body .about_me .bottom.row div, body .contact_me .bottom.row div {
+body .recent_works .bottom.row div, body .about_me .bottom.row div, body .contact_me .bottom.row div, body .skills_section .bottom.row div {
   position: relative;
   z-index: 1000;
   border-radius: 100%;
@@ -443,11 +585,11 @@ body .recent_works .bottom.row div, body .about_me .bottom.row div, body .contac
   transition: all ease .5s;
 }
 
-body .recent_works .bottom.row div:hover, body .about_me .bottom.row div:hover, body .contact_me .bottom.row div:hover {
+body .recent_works .bottom.row div:hover, body .about_me .bottom.row div:hover, body .contact_me .bottom.row div:hover, body .skills_section .bottom.row div:hover {
   background-color: white;
 }
 
-body .recent_works .bottom.row .centerspan, body .about_me .bottom.row .centerspan, body .contact_me .bottom.row .centerspan {
+body .recent_works .bottom.row .centerspan, body .about_me .bottom.row .centerspan, body .contact_me .bottom.row .centerspan, body .skills_section .bottom.row .centerspan {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -460,15 +602,15 @@ body .recent_works .bottom.row .centerspan, body .about_me .bottom.row .centersp
           flex-direction: column;
 }
 
-body .recent_works .bottom.row .centerspan div, body .about_me .bottom.row .centerspan div, body .contact_me .bottom.row .centerspan div {
+body .recent_works .bottom.row .centerspan div, body .about_me .bottom.row .centerspan div, body .contact_me .bottom.row .centerspan div, body .skills_section .bottom.row .centerspan div {
   margin: 20% 0%;
 }
 
-body .recent_works .bottom.row .left, body .about_me .bottom.row .left, body .contact_me .bottom.row .left {
+body .recent_works .bottom.row .left, body .about_me .bottom.row .left, body .contact_me .bottom.row .left, body .skills_section .bottom.row .left {
   background-color: white;
 }
 
-body .recent_works .bottom.row .mid, body .about_me .bottom.row .mid, body .contact_me .bottom.row .mid {
+body .recent_works .bottom.row .mid, body .about_me .bottom.row .mid, body .contact_me .bottom.row .mid, body .skills_section .bottom.row .mid {
   background-color: rgba(255, 255, 255, 0.479) !important;
 }
 
@@ -512,5 +654,26 @@ body .contact_me .row .up {
 
 body .contact_me .row .right {
   background-color: white !important;
+}
+
+body .skills_section {
+  -webkit-transform: rotateX(-90deg) translate(0%, -150%) translateZ(200px);
+          transform: rotateX(-90deg) translate(0%, -150%) translateZ(200px);
+}
+
+body .skills_section .row .down {
+  background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .skills_section .row .left {
+  background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .skills_section .row .up {
+  background-color: white !important;
+}
+
+body .skills_section .row .right {
+  background-color: rgba(255, 255, 255, 0.479) !important;
 }
 /*# sourceMappingURL=styles.css.map */

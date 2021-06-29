@@ -81,8 +81,8 @@ body{
     font-family: 'Rock Salt', cursive;
     font-family: 'Abril Fatface', cursive;
     position: relative;
-    cursor: none;
     width: 100%;
+    cursor: none;
     min-height: 100vh;
     height: auto;
     perspective: 200px;
@@ -104,21 +104,27 @@ body{
     .navigationContainer{
         position: absolute;
         z-index: 2;
-        color: white;
         @include absCentered();
+        transition: none;
 
         .navigationIcons{
             @include absCentered();
             font-size: 2rem;
             display: none;
             text-shadow: 0 0 1rem white;
+            color: white;
         }
+
         .fa-chevron-left{
             transform: translate(-100%,-50%);
         }
         .fa-chevron-down{
             display: none;
         }
+        // .fa{
+        //     display: none !important;
+
+        // }
     }
 
     .the_beginning{
@@ -191,6 +197,7 @@ body{
             @include flexRow();
             justify-content: space-between;
             perspective: 500px;
+            transform: translateZ(10px);
 
             i{
                 position: relative;
@@ -272,7 +279,7 @@ body{
         }
     }
 
-    .recent_works,.about_me,.contact_me{
+    .recent_works,.about_me,.contact_me,.skills_section{
         position: absolute;
         border: 1rem solid #3700FF;
         overflow: hidden;
@@ -292,8 +299,9 @@ body{
             i{
                 font-size: 2rem;
                 transition: all ease .25s;
+                border-radius: 100%;
                 &:hover{
-                    color: #3700FF;
+                    background: #3700FF;
                 }
             }
         }
@@ -306,48 +314,122 @@ body{
                 position: absolute;
                 @include absCentered();
                 font-size: 6rem;
+                z-index: 10;
                 span{
                     font-size: 3rem;
                 }
+            }
+            p{
+                position:absolute;
+                @include absCentered();
+                width: 30%;
+                font-size: 1.7vw;
+                text-align: center;
+                transform: translate(-50%,100%) translateZ(10px);
             }
         }
 
         .middle{
             font-size: 2rem;
-            .design,.develop{
-                position: relative;
-                transition: all ease .25s;
-                &::after{
-                    transition: all ease .25s;
-                    content: '';
-                    position: absolute;
-                    height: 0%;
-                    width: 90%;
-                    background-color: #3700FF;
-                    left: 0;
-                    bottom: -25%;
-                    border-radius: .5rem;
+            perspective: 1000px;
+            a{
+                transition: all ease 1s;
+                cursor: none;
+                @include flexCol();
+                @include absCentered();
+                text-decoration: none;
+                text-align: center;
+                overflow: hidden;
+                background-size: 100% 100%;
+                color: white;
+                border-bottom: .25rem solid #3700FF;
+                background-position: center;
+                cursor: pointer;
+
+                div{
+                    @include flexCol();
+                    background:#3700ffab !important;
+                    justify-content: space-evenly;
+                    height: inherit;
+                    width: 100%;
+                    transition: all ease .5s;
+                    opacity: 0;
+                    h1,h6{
+                        text-shadow: 0 0 1rem black;
+                    }
+                    h1{
+                        font-size: 3vw;
+                        line-height: 1;
+                    }
+                }
+                &:hover{
+                    background-size: 150% 150%;
+                    div{
+                        opacity: 1;
+                    }
                 }
             }
+            .varepprev{
+                @include absCentered();
+                height: 13vw;
+                width: 23vw;
+                z-index: 0;
+                transform: translate(90%,50%);
+                background-image: url(/public/images/varepPreview.PNG);
+                div{
+                    background:#305fb1c4;
+                }
 
-            .selected{
-                &::after{
-                    content: '';
-                    position: absolute;
-                    height: 10%;
-                    width: 90%;
-                    background-color: #3700FF;
-                    left: 0;
-                    bottom: -25%;
+            }
+            .reactsite{
+                background-image: url(/public/images/reactsite.PNG);
+                height: 13vw;
+                width: 23vw;
 
+                transform: translate(90%,-150%);
+                div{
+                    background:rgba(111, 26, 160, 0.671);
                 }
             }
+            .intsite{
+                background-image: url(/public/images/interactiveprev.PNG);
+                height: 13vw;
+                width: 23vw;
+                transform: translate(-190%,-150%);
+                background-size: 101% 101%;
 
+                div{
+                    background:rgba(0, 255, 0, 0.178);
+                }
+            }
+            .gameprev{
+                background-image: url(/public/images/gameprev.PNG);
+                height: 13vw;
+                width: 13vw;
+                background-size: 101% 101%;
+                transform: translate(-50%,-150%);
+                div{
+                    background:rgba(0, 0, 255, 0.308);
+                }
+            }            
+            .paintedsite{
+                @include absCentered();
+                height: 13vw;
+                width: 23vw;
+                z-index: 0;
+                transform: translate(-190%,50%);                
+                background-image: url(/public/images/animateprev.PNG);
+                div{
+                    background:#585858c4;
+                }
+            }
         }
         .bottom.row{
             justify-content: space-between;
             width: 3%;
             height: auto;
+            position: relative;
+
             div{
                 position: relative;
                 z-index: 1000;
@@ -410,5 +492,22 @@ body{
             .right{
                 background-color: white !important;
             }        }
+    }
+    .skills_section{
+        transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);
+        .row{
+            .down{
+                background-color: rgba(255, 255, 255, 0.479) !important;
+            }
+            .left{
+                background-color: rgba(255, 255, 255, 0.479) !important;
+            }
+            .up{
+                background-color: white !important;
+            }
+            .right{
+                background-color: rgba(255, 255, 255, 0.479) !important;
+            }        
+        }
     }
 }

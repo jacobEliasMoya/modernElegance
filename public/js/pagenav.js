@@ -1,11 +1,15 @@
 const navigationIndicator = document.querySelector('.navigationContainer');
 const contactedItem = document.querySelectorAll('.top i');
 const imgRotate = document.querySelectorAll('.imgs_container img');
+const prevLinks = document.querySelectorAll('.middle a');
+const navIcons =  document.querySelectorAll('.navigationIcons');
 
-const skillsSection = document.querySelector('.recent_works');
+const workSection = document.querySelector('.recent_works');
 const homeSection = document.querySelector('.the_beginning');
 const aboutSection = document.querySelector('.about_me');
 const contactSection = document.querySelector('.contact_me');
+const skillsSection = document.querySelector('.skills_section');
+
 
 const pageWidth = window.innerWidth;
 const pageHeight = window.innerHeight;
@@ -80,17 +84,17 @@ const displayDirection = (xAxis ,yAxis,pWidth) =>{
         imageRotationFunc();
     } else if(yAxis < pageHeight/1.25 && yAxis < pageHeight/4.5){
         mainDirection = 'up';
-        if(selectedDirection==='center'){
-            document.querySelector('.fa-chevron-left').style='display :block;';
-            document.querySelector('.fa-chevron-right').style='display :block;';  
-            document.querySelector('.fa-chevron-down').style='display :none;';
-            document.querySelector('.fa-chevron-up').style='display :none;';
-        } else {
-            document.querySelector('.fa-chevron-down').style='display :none;';
-            document.querySelector('.fa-chevron-left').style='display :none;';
-            document.querySelector('.fa-chevron-right').style='display :none;';  
-            document.querySelector('.fa-chevron-up').style='display :block;';
-        }
+        // if(selectedDirection==='center'){
+        //     document.querySelector('.fa-chevron-left').style='display :block;';
+        //     document.querySelector('.fa-chevron-right').style='display :block;';  
+        //     document.querySelector('.fa-chevron-down').style='display :none;';
+        //     document.querySelector('.fa-chevron-up').style='display :none;';
+        // } else {
+        document.querySelector('.fa-chevron-down').style='display :none;';
+        document.querySelector('.fa-chevron-left').style='display :none;';
+        document.querySelector('.fa-chevron-right').style='display :none;';  
+        document.querySelector('.fa-chevron-up').style='display :block;';
+        // }
 
         imageRotationFunc();
     }
@@ -106,13 +110,25 @@ const resetImageTrans = () => {
 // do not change, good for now
 document.addEventListener('mousemove',(e)=>{
     displayDirection(e.pageX,e.pageY,pageWidth);
-    navigationIndicator.style=`top:${e.pageY}px;left:${e.pageX}px;`;
+    navigationIndicator.style=`top:${e.pageY}px;left:${e.pageX-20}px;`;
+
 })
 
 // do not change, good for now
 document.addEventListener('mouseleave',(e)=>{
     resetImageTrans();
 })
+
+prevLinks.forEach(link=>{
+    link.addEventListener('mouseover',()=>{
+        navIcons.forEach(icon=>{
+            icon.style.color='red !important';
+            console.log(icon)
+        })
+    })
+})
+
+
 
 document.addEventListener('click',()=>{
     //if location is not centered
@@ -126,7 +142,7 @@ document.addEventListener('click',()=>{
                     imgRotate.forEach(img=>{
                         img.style='transform: rotateX(0deg) rotateY(-30deg) translateZ(300px);'
                     })
-                    skillsSection.style='transform: rotateX(0deg);';
+                    workSection.style='transform: rotateX(0deg);';
                     homeSection.style='transform: rotateY(-90deg) translate(100%) translateZ(100px);'
                 break;
                 case 'right':
@@ -147,6 +163,15 @@ document.addEventListener('click',()=>{
                     homeSection.style='transform: rotateX(-90deg) translate(0%,-210%) translateZ(0px);'
         
                 break;
+                case 'up':
+                    selectedDirection = mainDirection;
+                    imgRotate.forEach(img=>{
+                        img.style='transform: rotateX(-30deg) rotateY(0deg) translateZ(300px);'
+                    })  
+                    skillsSection.style='transform: rotateX(0deg);';
+                    homeSection.style='transform: rotateX(90deg) translate(0%,210%) translateZ(0px);'
+        
+                break;
                 default:
                     return;
             }
@@ -158,7 +183,7 @@ document.addEventListener('click',()=>{
                     imgRotate.forEach(img=>{
                         img.style='transform: rotateX(0deg) rotateY(30deg) translateZ(300px);'
                     })  
-                    skillsSection.style='transform: intial;';
+                    workSection.style='transform: intial;';
                     homeSection.style='initial';
                     selectedDirection = 'center';
 
@@ -198,14 +223,23 @@ document.addEventListener('click',()=>{
             break;
 
         }
+        case 'up':{
+            switch (mainDirection){
+                case 'down':
+                    imgRotate.forEach(img=>{
+                        img.style='transform: rotateX(0deg) rotateY(30deg) translateZ(300px);'
+                    })  
+                    skillsSection.style='transform: intial;';
+                    homeSection.style='initial';
+                    selectedDirection = 'center';
+
+                break;
+            }
+            break;
+
+        }
         default:
             return;
     }
 })
 
-window.addEventListener('load',()=>{
-    setTimeout(() => {
-        document.querySelector('.design');
-        document.querySelector('.develop');
-    }, 1000);
-})
