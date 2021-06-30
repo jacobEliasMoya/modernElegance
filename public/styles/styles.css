@@ -81,6 +81,10 @@ body .navigationContainer .fa-chevron-down {
   display: none;
 }
 
+body .navigationContainer .fa {
+  opacity: 1;
+}
+
 body .the_beginning {
   position: relative;
   z-index: 1;
@@ -666,13 +670,60 @@ body .recent_works .bottom.row .mid, body .about_me .bottom.row .mid, body .cont
 }
 
 body .nav_section {
-  z-index: 1;
+  z-index: 3;
+  cursor: default;
   -webkit-transform: rotateX(0deg) translate(0) translateZ(100vh);
           transform: rotateX(0deg) translate(0) translateZ(100vh);
   position: absolute;
   height: 100vh;
   width: 100%;
-  opacity: .9;
+}
+
+body .nav_section .row h2 {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  min-width: 25%;
+  cursor: pointer;
+  height: auto;
+  font-size: 5vw;
+  border: none;
+  background-size: 0% 0%;
+  background-size: none !important;
+  border: none !important;
+  -webkit-transition: all ease .25s;
+  transition: all ease .25s;
+}
+
+body .nav_section .row h2:hover {
+  color: #3700FF;
+}
+
+body .nav_section .row .gohome {
+  -webkit-transform: translate(-50%, -270%);
+          transform: translate(-50%, -270%);
+}
+
+body .nav_section .row .goabout {
+  -webkit-transform: translate(85%, -70%) rotate(90deg);
+          transform: translate(85%, -70%) rotate(90deg);
+}
+
+body .nav_section .row .gocontact {
+  -webkit-transform: translate(-50%, 110%);
+          transform: translate(-50%, 110%);
+}
+
+body .nav_section .row .gowork {
+  -webkit-transform: translate(-50%, -75%);
+          transform: translate(-50%, -75%);
+}
+
+body .nav_section .row .goskills {
+  -webkit-transform: translate(-190%, -70%) rotate(-90deg);
+          transform: translate(-190%, -70%) rotate(-90deg);
 }
 
 body .about_me {

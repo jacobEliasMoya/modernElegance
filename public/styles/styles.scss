@@ -113,6 +113,11 @@ body{
             display: none;
         }
 
+        .fa{
+            opacity: 1;
+        }
+
+
     }
 
     .the_beginning{
@@ -492,13 +497,44 @@ body{
     }
 
     .nav_section{
-        z-index: 1;
+        z-index: 3;
+        cursor: default;
         transform: rotateX(0deg) translate(0) translateZ(100vh);
         position: absolute;
         height: 100vh;
         width: 100%;
-        opacity: .9;
-
+        .row{
+            h2{
+                @include absCentered();   
+                min-width: 25%;
+                cursor: pointer;
+                height: auto;
+                font-size: 5vw;
+                border:none;
+                background-size: 0% 0%;
+                background-size: none !important;
+                border: none !important;
+                transition: all ease .25s;
+                &:hover{
+                    color: #3700FF;
+                }
+            }
+            .gohome{
+                transform: translate(-50%,-270%);
+            }
+            .goabout{
+                transform: translate(85%, -70%) rotate(90deg);
+            }
+            .gocontact{
+                transform: translate(-50%,110%);                
+            }
+            .gowork{
+                transform: translate(-50%,-75%);                
+            }
+            .goskills{
+                transform: translate(-190%,-70%) rotate(-90deg);
+            }
+        }
     }
     // leave alone for now
     .about_me{

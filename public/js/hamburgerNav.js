@@ -52,28 +52,28 @@ const untranslate = () => {
 const backTranslate = () =>{
     switch (selectedDirection){
         case 'center':
-            homeSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-100vh)';
+            homeSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-60vh)';
             navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
             selectedDirection='centerback'
 
         break;
         case 'left':
-            workSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-100vh)';
+            workSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-60vh)';
             navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
             selectedDirection='leftback';
         break;
         case 'right':
-            contactSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-100vh)';
+            contactSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-60vh)';
             navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
             selectedDirection='rightback'
         break;
         case 'down':
-            aboutSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-100vh)';
+            aboutSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-60vh)';
             navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
             selectedDirection='downback'
         break;
         case 'up':
-            skillsSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-100vh)';
+            skillsSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(-60vh)';
             navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
             selectedDirection='upback';
         break;

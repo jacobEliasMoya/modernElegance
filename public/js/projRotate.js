@@ -1,5 +1,6 @@
 const projectLinks = document.querySelectorAll('.middle a');
 let selectedLink = '';
+const opaqueNavIcon = document.querySelector('.navigationContainer .fa');
 
 const linkrotate = () =>{
     if(selectedLink.classList.contains('gameprev')){
@@ -44,8 +45,10 @@ projectLinks.forEach(link=>{
     link.addEventListener('mouseover',(e)=>{
         selectedLink = link;
         linkrotate();
+
     })
 })
+
 
 projectLinks.forEach(link=>{
     link.addEventListener('mouseleave',()=>{
