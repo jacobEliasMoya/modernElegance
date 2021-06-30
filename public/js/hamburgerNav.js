@@ -1,6 +1,7 @@
-console.log(selectedDirection);
 const contactedItem = document.querySelectorAll('.top i');
 const revertNav = document.querySelector('.goback');
+const navOptions = document.querySelectorAll('.navoption');
+
 // workSection 
 // homeSection 
 // aboutSection 
@@ -82,6 +83,20 @@ const backTranslate = () =>{
     }
 }
 
+const goToSelection = (evnt) => {
+    // evnt.target;
+    // console.log(e)
+    if(evnt.target.classList.contains('gohome')){
+        if(selectedDirection === 'centerback'){
+            homeSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+            navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+            setTimeout(()=>{
+                selectedDirection='center'
+            },1500)
+        }
+    }
+}
+
 contactedItem.forEach(item=>{
     item.addEventListener('click',()=>{
         backTranslate();
@@ -90,4 +105,10 @@ contactedItem.forEach(item=>{
 
 revertNav.addEventListener('click',()=>{
     untranslate();
+})
+
+navOptions.forEach(option=>{
+    option.addEventListener('click',(e)=>{
+        goToSelection(e);
+    })
 })
