@@ -2,12 +2,6 @@ const contactedItem = document.querySelectorAll('.top i');
 const revertNav = document.querySelector('.goback');
 const navOptions = document.querySelectorAll('.navoption');
 
-// workSection 
-// homeSection 
-// aboutSection 
-// contactSection
-// skillsSection 
-
 const untranslate = () => {
     switch (selectedDirection){
         case 'centerback':
@@ -84,8 +78,6 @@ const backTranslate = () =>{
 }
 
 const goToSelection = (evnt) => {
-    // evnt.target;
-    // console.log(e)
     if(evnt.target.classList.contains('gohome')){
         switch(selectedDirection){
             case 'centerback':
@@ -148,6 +140,7 @@ const goToSelection = (evnt) => {
             },1500)
             break;
             case 'rightback':
+                homeSection.style='transform: rotateY(-90deg) translate(100%) translateZ(100px);'
                 navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
                 workSection.style='transform: rotateX(0deg);';
                 contactSection.style = 'initial';
@@ -156,6 +149,7 @@ const goToSelection = (evnt) => {
             },1500)
             break;
             case 'upback':
+                homeSection.style='transform: rotateY(-90deg) translate(100%) translateZ(100px);'
                 navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
                 workSection.style='transform: rotateX(0deg);';
                 skillsSection.style = 'initial';
@@ -164,11 +158,155 @@ const goToSelection = (evnt) => {
             },1500)
             break;
             case 'downback':
+                homeSection.style='transform: rotateY(-90deg) translate(100%) translateZ(100px);'
                 navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
                 workSection.style='transform: rotateX(0deg);';
                 aboutSection.style = 'initial';
             setTimeout(()=>{
                 selectedDirection='left'
+            },1500)
+            break;
+            
+        }
+    }
+    if(evnt.target.classList.contains('gocontact')){
+        switch(selectedDirection){
+            case 'centerback':
+                contactSection.style='transform: rotateX(0deg);';
+                homeSection.style='transform: rotateY(90deg) translate(-100%) translateZ(100px);'
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+            setTimeout(()=>{
+                selectedDirection='right'
+            },1500)
+            break;
+            case 'leftback':
+                contactSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(0vh)';
+                workSection.style='transform: intial;';
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                homeSection.style='transform: rotateY(90deg) translate(-100%) translateZ(100px);'
+                setTimeout(()=>{
+                selectedDirection='right'
+            },1500)
+            break;
+            case 'rightback':
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                contactSection.style='transform: rotateX(0deg);';
+            setTimeout(()=>{
+                selectedDirection='right'
+            },1500)
+            break;
+            case 'upback':
+                homeSection.style='transform: rotateY(90deg) translate(-100%) translateZ(100px);'
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                contactSection.style='transform: rotateX(0deg);';
+                skillsSection.style = 'initial';
+            setTimeout(()=>{
+                selectedDirection='right'
+            },1500)
+            break;
+            case 'downback':
+                homeSection.style='transform: rotateY(90deg) translate(-100%) translateZ(100px);'
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                contactSection.style='transform: rotateX(0deg);';
+                aboutSection.style = 'initial';
+            setTimeout(()=>{
+                selectedDirection='right'
+            },1500)
+            break;
+            
+        }
+    }
+    if(evnt.target.classList.contains('goskills')){
+        switch(selectedDirection){
+            case 'centerback':
+                skillsSection.style='transform: rotateX(0deg);';
+                homeSection.style='transform: rotateX(90deg) translate(0%,210%) translateZ(0px);'
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+            setTimeout(()=>{
+                selectedDirection='up'
+            },1500)
+            break;
+            case 'leftback':
+                skillsSection.style='transform: rotateX(0deg);';
+                workSection.style='transform: intial;';
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                homeSection.style='transform: rotateX(90deg) translate(0%,210%) translateZ(0px);'
+                setTimeout(()=>{
+                selectedDirection='up'
+            },1500)
+            break;
+            case 'rightback':
+                skillsSection.style='transform: rotateX(0deg);';
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                contactSection.style='transform: intial;';
+                homeSection.style='transform: rotateX(90deg) translate(0%,210%) translateZ(0px);'
+                setTimeout(()=>{
+                selectedDirection='up'
+            },1500)
+            break;
+            case 'upback':
+                homeSection.style='transform: rotateX(90deg) translate(0%,210%) translateZ(0px);'
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                skillsSection.style = 'transform: rotateX(0deg)';
+            setTimeout(()=>{
+                selectedDirection='up'
+            },1500)
+            break;
+            case 'downback':
+                skillsSection.style='transform: rotateX(0deg);';
+                homeSection.style='transform: rotateX(90deg) translate(0%,210%) translateZ(0px);'
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                aboutSection.style = 'initial';
+            setTimeout(()=>{
+                selectedDirection='up'
+            },1500)
+            break;
+            
+        }
+    }
+    if(evnt.target.classList.contains('goabout')){
+        switch(selectedDirection){
+            case 'centerback':
+                aboutSection.style='transform: rotateX(0deg);';
+                homeSection.style='transform: rotateX(-90deg) translate(0%,-210%) translateZ(0px);'
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+            setTimeout(()=>{
+                selectedDirection='down'
+            },1500)
+            break;
+            case 'leftback':
+                aboutSection.style='transform: rotateX(0deg);';
+                workSection.style='transform: intial;';
+                homeSection.style='transform: rotateX(-90deg) translate(0%,-210%) translateZ(0px);'
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                setTimeout(()=>{
+                selectedDirection='down'
+            },1500)
+            break;
+            case 'rightback':
+                aboutSection.style='transform: rotateX(0deg);';
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                contactSection.style='transform: intial;';
+                homeSection.style='transform: rotateX(-90deg) translate(0%,-210%) translateZ(0px);'
+                setTimeout(()=>{
+                selectedDirection='down'
+            },1500)
+            break;
+            case 'upback':
+                homeSection.style='transform: rotateX(-90deg) translate(0%,-210%) translateZ(0px);'
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                aboutSection.style='transform: rotateX(0deg);';
+                skillsSection.style='transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);';
+
+            setTimeout(()=>{
+                selectedDirection='down'
+            },1500)
+            break;
+            case 'downback':
+                navSection.style.transform= 'rotateX(0deg) rotateY(0deg) translateZ(100vh)';
+                aboutSection.style = 'transform: rotateX(0deg)';
+            setTimeout(()=>{
+                selectedDirection='down'
             },1500)
             break;
             

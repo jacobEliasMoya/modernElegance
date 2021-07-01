@@ -11,8 +11,8 @@ const skillsSection = document.querySelector('.skills_section');
 const navSection = document.querySelector('.nav_section');
 
 
-const pageWidth = window.innerWidth;
-const pageHeight = window.innerHeight;
+let pageWidth = window.innerWidth;
+let pageHeight = window.innerHeight;
 
 let mainDirection = null;
 let selectedDirection = 'center';
@@ -84,18 +84,10 @@ const displayDirection = (xAxis ,yAxis,pWidth) =>{
         imageRotationFunc();
     } else if(yAxis < pageHeight/1.25 && yAxis < pageHeight/4.5){
         mainDirection = 'up';
-        // if(selectedDirection==='center'){
-        //     document.querySelector('.fa-chevron-left').style='display :block;';
-        //     document.querySelector('.fa-chevron-right').style='display :block;';  
-        //     document.querySelector('.fa-chevron-down').style='display :none;';
-        //     document.querySelector('.fa-chevron-up').style='display :none;';
-        // } else {
         document.querySelector('.fa-chevron-down').style='display :none;';
         document.querySelector('.fa-chevron-left').style='display :none;';
         document.querySelector('.fa-chevron-right').style='display :none;';  
         document.querySelector('.fa-chevron-up').style='display :block;';
-        // }
-
         imageRotationFunc();
     }
 }
@@ -125,7 +117,10 @@ prevLinks.forEach(link=>{
     })
 })
 
-
+window.addEventListener('resize',()=>{
+    pageWidth = window.innerWidth;
+pageHeight = window.innerHeight;
+})
 
 document.addEventListener('click',()=>{
     //if location is not centered

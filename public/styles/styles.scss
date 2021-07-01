@@ -122,7 +122,7 @@ body{
 
     .the_beginning{
         position: relative;
-        z-index: 1;
+        z-index: -100;
         border: 1vw solid #3700FF;
         overflow: hidden;
         padding: 1.5% 2%;
@@ -131,7 +131,7 @@ body{
         justify-content: space-between;
         background-color: black !important;
         color: white;
-        transition: all ease 1.5s;
+        transition: all ease 2s;
         transform: rotateY(0deg) translate(0%) translateZ(0px);
 
         .imgs_container{
@@ -294,7 +294,7 @@ body{
         @include fullScreener();
         justify-content: space-between;
         background-color: black !important;
-        transition: all ease 1.5s;
+        transition: all ease 2s;
         color: white;
         transform: rotateY(90deg) translate(-300%) translateZ(100px);
         top:0;
@@ -367,7 +367,7 @@ body{
             font-size: 2rem;
             perspective: 75vw;
             a{
-                transition: all ease 1s;
+                transition: all ease .5s;
                 cursor: none;
                 @include flexCol();
                 @include absCentered();
