@@ -43,6 +43,8 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    user-select: none;
+
 }
 
 // scroll bars stylings
@@ -131,7 +133,7 @@ body{
         justify-content: space-between;
         background-color: black !important;
         color: white;
-        transition: all ease 2s;
+        transition: all ease 1.75s;
         transform: rotateY(0deg) translate(0%) translateZ(0px);
 
         .imgs_container{
@@ -206,6 +208,7 @@ body{
             }
             h2{
                 transform: translate(-10%,-75%) translateZ(1px);
+
             }
 
         }
@@ -222,6 +225,7 @@ body{
                 transition: all ease .25s;
                 letter-spacing: 2px;
                 transform: translateZ(-1px);
+
                 &::after{
                     transition: all ease .25s;
                     content: '';
@@ -294,7 +298,7 @@ body{
         @include fullScreener();
         justify-content: space-between;
         background-color: black !important;
-        transition: all ease 2s;
+        transition: all ease 1.75s;
         color: white;
         transform: rotateY(90deg) translate(-300%) translateZ(100px);
         top:0;
@@ -335,7 +339,7 @@ body{
                 width: 30%;
                 font-size: 1.7vw;
                 text-align: center;
-                transform: translate(-50%,100%) translateZ(10px);
+                transform: translate(-50%,80%) translateZ(10px);
                 a{
                     transition: all ease .5s;
                     color: white;
@@ -367,7 +371,7 @@ body{
             font-size: 2rem;
             perspective: 75vw;
             a{
-                transition: all ease .5s;
+                transition: all ease .75s;
                 cursor: none;
                 @include flexCol();
                 @include absCentered();
@@ -433,7 +437,6 @@ body{
                 width: 23vw;
                 transform: translate(-190%,-150%);
                 background-size: 101% 101%;
-
                 div{
                     background:rgba(0, 255, 0, 0.178);
                 }
