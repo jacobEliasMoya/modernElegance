@@ -3,6 +3,10 @@
   padding: 0;
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none;
 }
 
 /* width */
@@ -87,7 +91,7 @@ body .navigationContainer .fa {
 
 body .the_beginning {
   position: relative;
-  z-index: 1;
+  z-index: -100;
   border: 1vw solid #3700FF;
   overflow: hidden;
   padding: 1.5% 2%;
@@ -111,8 +115,8 @@ body .the_beginning {
           justify-content: space-between;
   background-color: black !important;
   color: white;
-  -webkit-transition: all ease 1.5s;
-  transition: all ease 1.5s;
+  -webkit-transition: all ease 1.75s;
+  transition: all ease 1.75s;
   -webkit-transform: rotateY(0deg) translate(0%) translateZ(0px);
           transform: rotateY(0deg) translate(0%) translateZ(0px);
 }
@@ -352,8 +356,8 @@ body .recent_works, body .about_me, body .contact_me, body .skills_section, body
       -ms-flex-pack: justify;
           justify-content: space-between;
   background-color: black !important;
-  -webkit-transition: all ease 1.5s;
-  transition: all ease 1.5s;
+  -webkit-transition: all ease 1.75s;
+  transition: all ease 1.75s;
   color: white;
   -webkit-transform: rotateY(90deg) translate(-300%) translateZ(100px);
           transform: rotateY(90deg) translate(-300%) translateZ(100px);
@@ -431,8 +435,8 @@ body .recent_works .top p, body .recent_works .middle p, body .about_me .top p, 
   width: 30%;
   font-size: 1.7vw;
   text-align: center;
-  -webkit-transform: translate(-50%, 100%) translateZ(10px);
-          transform: translate(-50%, 100%) translateZ(10px);
+  -webkit-transform: translate(-50%, 80%) translateZ(10px);
+          transform: translate(-50%, 80%) translateZ(10px);
 }
 
 body .recent_works .top p a, body .recent_works .middle p a, body .about_me .top p a, body .about_me .middle p a, body .contact_me .top p a, body .contact_me .middle p a, body .skills_section .top p a, body .skills_section .middle p a, body .nav_section .top p a, body .nav_section .middle p a {
@@ -469,8 +473,8 @@ body .recent_works .middle, body .about_me .middle, body .contact_me .middle, bo
 }
 
 body .recent_works .middle a, body .about_me .middle a, body .contact_me .middle a, body .skills_section .middle a, body .nav_section .middle a {
-  -webkit-transition: all ease 1s;
-  transition: all ease 1s;
+  -webkit-transition: all ease .75s;
+  transition: all ease .75s;
   cursor: none;
   display: -webkit-box;
   display: -ms-flexbox;
