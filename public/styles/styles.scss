@@ -411,14 +411,14 @@ body{
                 width: 23vw;
                 z-index: 0;
                 transform: translate(90%,45%) rotateY(0deg) rotateX(0deg);
-                background-image: url(/public/images/varepPreview.PNG);
+                background-image: url(/public/images/varepPreview.webp);
                 div{
                     background:#305fb1c4;
                 }
 
             }
             .reactsite{
-                background-image: url(/public/images/reactsite.PNG);
+                background-image: url(/public/images/reactsite.webp);
                 height: 13vw;
                 width: 23vw;
 
@@ -428,7 +428,7 @@ body{
                 }
             }
             .intsite{
-                background-image: url(/public/images/interactiveprev.PNG);
+                background-image: url(/public/images/interactiveprev.webp);
                 height: 13vw;
                 width: 23vw;
                 transform: translate(-190%,-150%);
@@ -439,7 +439,7 @@ body{
                 }
             }
             .gameprev{
-                background-image: url(/public/images/gameprev.PNG);
+                background-image: url(/public/images/gameprev.webp);
                 height: 13vw;
                 width: 13vw;
                 background-size: 101% 101%;
@@ -454,7 +454,7 @@ body{
                 width: 23vw;
                 z-index: 0;
                 transform: translate(-190%,45%);                
-                background-image: url(/public/images/animateprev.PNG);
+                background-image: url(/public/images/animateprev.webp);
                 div{
                     background:#585858c4;
                 }
