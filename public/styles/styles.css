@@ -417,15 +417,15 @@ body .recent_works .top h2, body .recent_works .middle h2, body .about_me .top h
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 6rem;
+  font-size: 8vw;
   z-index: 10;
 }
 
 body .recent_works .top h2 span, body .recent_works .middle h2 span, body .about_me .top h2 span, body .about_me .middle h2 span, body .contact_me .top h2 span, body .contact_me .middle h2 span, body .skills_section .top h2 span, body .skills_section .middle h2 span, body .nav_section .top h2 span, body .nav_section .middle h2 span {
-  font-size: 3rem;
+  font-size: 4vw;
 }
 
-body .recent_works .top p, body .recent_works .middle p, body .about_me .top p, body .about_me .middle p, body .contact_me .top p, body .contact_me .middle p, body .skills_section .top p, body .skills_section .middle p, body .nav_section .top p, body .nav_section .middle p {
+body .recent_works .top p:not(.aboutdesc), body .recent_works .middle p:not(.aboutdesc), body .about_me .top p:not(.aboutdesc), body .about_me .middle p:not(.aboutdesc), body .contact_me .top p:not(.aboutdesc), body .contact_me .middle p:not(.aboutdesc), body .skills_section .top p:not(.aboutdesc), body .skills_section .middle p:not(.aboutdesc), body .nav_section .top p:not(.aboutdesc), body .nav_section .middle p:not(.aboutdesc) {
   position: absolute;
   position: absolute;
   left: 50%;
@@ -439,7 +439,7 @@ body .recent_works .top p, body .recent_works .middle p, body .about_me .top p, 
           transform: translate(-50%, 80%) translateZ(10px);
 }
 
-body .recent_works .top p a, body .recent_works .middle p a, body .about_me .top p a, body .about_me .middle p a, body .contact_me .top p a, body .contact_me .middle p a, body .skills_section .top p a, body .skills_section .middle p a, body .nav_section .top p a, body .nav_section .middle p a {
+body .recent_works .top p:not(.aboutdesc) a, body .recent_works .middle p:not(.aboutdesc) a, body .about_me .top p:not(.aboutdesc) a, body .about_me .middle p:not(.aboutdesc) a, body .contact_me .top p:not(.aboutdesc) a, body .contact_me .middle p:not(.aboutdesc) a, body .skills_section .top p:not(.aboutdesc) a, body .skills_section .middle p:not(.aboutdesc) a, body .nav_section .top p:not(.aboutdesc) a, body .nav_section .middle p:not(.aboutdesc) a {
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   color: white;
@@ -449,7 +449,7 @@ body .recent_works .top p a, body .recent_works .middle p a, body .about_me .top
   padding: 0% 1%;
 }
 
-body .recent_works .top p a::after, body .recent_works .middle p a::after, body .about_me .top p a::after, body .about_me .middle p a::after, body .contact_me .top p a::after, body .contact_me .middle p a::after, body .skills_section .top p a::after, body .skills_section .middle p a::after, body .nav_section .top p a::after, body .nav_section .middle p a::after {
+body .recent_works .top p:not(.aboutdesc) a::after, body .recent_works .middle p:not(.aboutdesc) a::after, body .about_me .top p:not(.aboutdesc) a::after, body .about_me .middle p:not(.aboutdesc) a::after, body .contact_me .top p:not(.aboutdesc) a::after, body .contact_me .middle p:not(.aboutdesc) a::after, body .skills_section .top p:not(.aboutdesc) a::after, body .skills_section .middle p:not(.aboutdesc) a::after, body .nav_section .top p:not(.aboutdesc) a::after, body .nav_section .middle p:not(.aboutdesc) a::after {
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   content: '';
@@ -462,7 +462,7 @@ body .recent_works .top p a::after, body .recent_works .middle p a::after, body 
   z-index: -1;
 }
 
-body .recent_works .top p a:hover::after, body .recent_works .middle p a:hover::after, body .about_me .top p a:hover::after, body .about_me .middle p a:hover::after, body .contact_me .top p a:hover::after, body .contact_me .middle p a:hover::after, body .skills_section .top p a:hover::after, body .skills_section .middle p a:hover::after, body .nav_section .top p a:hover::after, body .nav_section .middle p a:hover::after {
+body .recent_works .top p:not(.aboutdesc) a:hover::after, body .recent_works .middle p:not(.aboutdesc) a:hover::after, body .about_me .top p:not(.aboutdesc) a:hover::after, body .about_me .middle p:not(.aboutdesc) a:hover::after, body .contact_me .top p:not(.aboutdesc) a:hover::after, body .contact_me .middle p:not(.aboutdesc) a:hover::after, body .skills_section .top p:not(.aboutdesc) a:hover::after, body .skills_section .middle p:not(.aboutdesc) a:hover::after, body .nav_section .top p:not(.aboutdesc) a:hover::after, body .nav_section .middle p:not(.aboutdesc) a:hover::after {
   height: 90%;
 }
 
@@ -735,6 +735,10 @@ body .about_me {
           transform: rotateX(90deg) translate(0%, 150%) translateZ(200px);
 }
 
+body .about_me .row i {
+  z-index: 1;
+}
+
 body .about_me .row .down {
   background-color: white !important;
 }
@@ -749,6 +753,141 @@ body .about_me .row .up {
 
 body .about_me .row .right {
   background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .about_me .middle {
+  height: inherit;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 90% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+
+body .about_me .middle div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100%;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .about_me .middle div p {
+  width: 100%;
+  height: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  font-size: 2.2vw;
+  -webkit-transform: translate(-3%, -3%);
+          transform: translate(-3%, -3%);
+}
+
+body .about_me .middle div .rightside {
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+  text-align: right;
+  -webkit-transform: translate(3%);
+          transform: translate(3%);
+}
+
+body .about_me .middle div img {
+  position: absolute;
+  width: 20vw;
+}
+
+body .about_me .middle div .family {
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(-25%, 25%);
+          transform: translate(-25%, 25%);
+}
+
+body .about_me .middle div .guitar {
+  left: 0;
+  bottom: 0;
+  -webkit-transform: translate(35%, -25%) rotate(-10deg);
+          transform: translate(35%, -25%) rotate(-10deg);
+}
+
+body .about_me .middle .left_inner {
+  position: relative;
+}
+
+body .about_me .middle .left_inner .descwords {
+  position: absolute;
+  width: auto;
+  height: auto;
+  left: 0;
+  bottom: 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-transform: rotate(0deg) translate(-8%, 0%);
+          transform: rotate(0deg) translate(-8%, 0%);
+}
+
+body .about_me .middle .right_inner {
+  position: relative;
+}
+
+body .about_me .middle .right_inner .descwords {
+  -webkit-transform: rotate(0deg) translate(5%, -10%);
+          transform: rotate(0deg) translate(5%, -10%);
+  position: absolute;
+  width: auto;
+  height: auto;
+  right: 0;
+  top: 0;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: flex-end;
+}
+
+body .about_me .middle .inner h3 {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  font-size: 3vw;
+  color: #4815ff;
 }
 
 body .contact_me {

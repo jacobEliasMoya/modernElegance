@@ -117,7 +117,7 @@ prevLinks.forEach(link=>{
     })
 })
 
-window.addEventListener('resize',()=>{
+document.addEventListener('resize',()=>{
     pageWidth = window.innerWidth;
 pageHeight = window.innerHeight;
 })

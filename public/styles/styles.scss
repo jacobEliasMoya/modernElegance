@@ -135,7 +135,7 @@ body{
         color: white;
         transition: all ease 1.75s;
         transform: rotateY(0deg) translate(0%) translateZ(0px);
-
+        
         .imgs_container{
             @include absCentered();
             position: absolute;
@@ -327,13 +327,14 @@ body{
                 text-align: center;
                 position: absolute;
                 @include absCentered();
-                font-size: 6rem;
+                font-size: 8vw;
                 z-index: 10;
                 span{
-                    font-size: 3rem;
+                    font-size: 4vw;
+                    // color: #3700FF;
                 }
             }
-            p{
+            p:not(.aboutdesc){
                 position:absolute;
                 @include absCentered();
                 width: 30%;
@@ -542,7 +543,13 @@ body{
     // leave alone for now
     .about_me{
         transform: rotateX(90deg) translate(0%,150%) translateZ(200px);
+        // transform: none;
+
+
         .row{
+            i{
+                z-index: 1;
+            }
             .down{
                 background-color: white !important;
             }
@@ -555,6 +562,84 @@ body{
             .right{
                 background-color: rgba(255, 255, 255, 0.479) !important;
             }
+        }
+        .middle{
+            height: inherit;
+            align-items: flex-start;
+            width: 90% !important;
+            @include flexRow();
+            div{
+                @include flexCol();
+                height: 100%;
+                // background: blue;
+                width: 100%;
+                justify-content: space-between;
+                p{
+                    width: 100%;
+                    height: 100%;
+                    @include flexCol();
+                    justify-content: flex-start;
+                    font-size: 2.2vw;
+                    transform: translate(-3%,-3%);
+                }
+                .rightside{
+                    // background: red;
+                    justify-content: flex-end;
+                    text-align: right;
+                    transform: translate(3%);
+                }
+                img{
+                    position: absolute;
+                    width: 20vw;
+                }
+                .family{
+                    left: 0;
+                    bottom: 0;
+                    transform: translate(-25%,25%);
+                } 
+                .guitar{
+                    left: 0;
+                    bottom: 0;
+                    transform: translate(35%,-25%) rotate(-10deg);
+                } 
+
+
+            } 
+            .left_inner{
+                position: relative;
+                .descwords{
+                    position: absolute;
+                    width: auto;
+                    height: auto;
+                    left: 0;
+                    bottom: 0;
+                    align-items: flex-start;
+                    transform: rotate(0deg) translate(-8%,0%);
+
+                }
+            }
+            .right_inner{
+                position: relative;
+                .descwords{
+                    transform: rotate(0deg) translate(5%,-10%);
+                    position: absolute;
+                    width: auto;
+                    height: auto;
+                    right: 0;
+                    top: 0;
+                    align-items: flex-end;
+
+                }
+            }
+            .inner{
+                h3{
+                    transition: all ease .5s;
+                    font-size: 3vw;
+                    color: #4815ff;
+
+                }
+            }
+
         }
     }
     .contact_me{
