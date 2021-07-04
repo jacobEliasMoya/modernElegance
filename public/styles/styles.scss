@@ -306,7 +306,7 @@ body{
         .row{
             @include flexRow();
             justify-content: space-between;
-            i{
+            i:not(.contacter){
                 font-size: 2rem;
                 transition: all ease .5s;
                 border-bottom-left-radius: 50%;
@@ -358,6 +358,8 @@ body{
                         height: 8%;
                         background: #3700ff;
                         z-index: -1;
+                        border-top-left-radius: .5rem;
+                        border-top-right-radius: .5rem;
                     }
                     &:hover{
                         &::after{
@@ -471,6 +473,7 @@ body{
             position: relative;
 
             div{
+                opacity: .3;
                 position: relative;
                 z-index: 1000;
                 border-radius: 100%;
@@ -541,7 +544,7 @@ body{
         }
     }
     // leave alone for now
-    .about_me{
+    .about_me,.contact_me{
         transform: rotateX(90deg) translate(0%,150%) translateZ(200px);
         // transform: none;
 
@@ -642,8 +645,10 @@ body{
 
         }
     }
+
     .contact_me{
         transform: rotateY(-90deg) translate(300%) translateZ(100px) ;
+        // transform: none;
         .row{
             .down{
                 background-color: rgba(255, 255, 255, 0.479) !important;
@@ -656,8 +661,132 @@ body{
             }
             .right{
                 background-color: white !important;
-            }        }
-    }
+            }        
+        }
+        .middle{
+            height: inherit;
+            align-items: flex-start;
+            width: 90% !important;
+            @include flexCol();
+            div{
+                @include flexCol();
+                width: 100%;
+                p{
+                    @include flexCol();
+                    height: auto;
+                    width: 100% !important;
+                    font-size: 2.2vw !important;
+                    position: static !important;
+                    transform: translate(0,-50%) !important;
+                }
+            } 
+            .left_inner{
+                position: relative;
+            }
+            .right_inner{
+                position: relative;
+                form{
+                    width: 88%;
+                    @include flexRow();
+                    justify-content: space-between;
+                    transform: translate(0,40%);
+                    span{
+                        @include flexRow();
+                        width: 30%;
+                        input,textarea{
+                            max-height: 2rem;
+                            padding: .5rem;
+                            width: 100%;
+                            background: white;
+                            border: none;
+                            margin: 0% 5%;
+                            font-weight: bolder;
+                            color: black;
+                            padding: none !important;
+                            
+                            &::after{
+                                content: '';
+                                position:  absolute;
+                                bottom: 0;
+                                background: red;
+                                width: 100%;
+                                height: 10rem;
+                            }
+                        }
+                    }
+                    .spanmessage{
+                        width: 50%;
+                    }
+                    #submit{
+                        background:#3700ffaf;
+                        height: 2rem;
+                        padding: 0% 1%;
+                        color: white;
+                        border: none;
+                        &:hover{
+                           background: #3700FF;
+                           cursor: pointer;
+                        }
+                    }
+                }
+            }
+            .getintouch{
+                width: 88%;
+                @include flexRow();
+                justify-content: space-between;
+                a{
+                    position: static !important;
+                    text-align: center;
+                    color: white;
+                    transform: translate(0%,10%);
+                    font-size: 1.25vw;
+                    text-decoration: none;
+                    border-bottom: none;
+                    z-index: 1;
+                    padding: 1%;
+                    i{
+                        transition: all ease .5s;
+                    }
+                    &::after{
+                        background: #3700FF;
+                        width: 100%;
+                        position: absolute;
+                        content: '';
+                        bottom: 0;
+                        left: 0;
+                        height: 5%;
+                        z-index: -1;
+                        transition: all ease .5s;
+                        border-top-left-radius: 1rem;
+                        border-top-right-radius: 1rem;
+                    }
+                    &:hover{
+                        text-shadow: 0 0 1rem black;
+                        &::after{
+                            height: 100%;
+                        }
+                        i{
+                            transform: rotate(360deg);
+                        }
+                    }
+                    *{
+                        font-size: 3vw;
+                    }
+                }
+            }
+            .inner{
+                h3{
+                    transition: all ease .5s;
+                    font-size: 3vw;
+                    color: #4815ff;
+
+                }
+            }
+
+        }
+
+    }    
+
     .skills_section{
         transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);
         .row{

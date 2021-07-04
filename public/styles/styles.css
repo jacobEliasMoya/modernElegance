@@ -384,7 +384,7 @@ body .recent_works .row, body .about_me .row, body .contact_me .row, body .skill
           justify-content: space-between;
 }
 
-body .recent_works .row i, body .about_me .row i, body .contact_me .row i, body .skills_section .row i, body .nav_section .row i {
+body .recent_works .row i:not(.contacter), body .about_me .row i:not(.contacter), body .contact_me .row i:not(.contacter), body .skills_section .row i:not(.contacter), body .nav_section .row i:not(.contacter) {
   font-size: 2rem;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
@@ -396,7 +396,7 @@ body .recent_works .row i, body .about_me .row i, body .contact_me .row i, body 
           transform: translate(30%, -30%);
 }
 
-body .recent_works .row i:hover, body .about_me .row i:hover, body .contact_me .row i:hover, body .skills_section .row i:hover, body .nav_section .row i:hover {
+body .recent_works .row i:not(.contacter):hover, body .about_me .row i:not(.contacter):hover, body .contact_me .row i:not(.contacter):hover, body .skills_section .row i:not(.contacter):hover, body .nav_section .row i:not(.contacter):hover {
   background: #3700FF;
 }
 
@@ -460,6 +460,8 @@ body .recent_works .top p:not(.aboutdesc) a::after, body .recent_works .middle p
   height: 8%;
   background: #3700ff;
   z-index: -1;
+  border-top-left-radius: .5rem;
+  border-top-right-radius: .5rem;
 }
 
 body .recent_works .top p:not(.aboutdesc) a:hover::after, body .recent_works .middle p:not(.aboutdesc) a:hover::after, body .about_me .top p:not(.aboutdesc) a:hover::after, body .about_me .middle p:not(.aboutdesc) a:hover::after, body .contact_me .top p:not(.aboutdesc) a:hover::after, body .contact_me .middle p:not(.aboutdesc) a:hover::after, body .skills_section .top p:not(.aboutdesc) a:hover::after, body .skills_section .middle p:not(.aboutdesc) a:hover::after, body .nav_section .top p:not(.aboutdesc) a:hover::after, body .nav_section .middle p:not(.aboutdesc) a:hover::after {
@@ -560,7 +562,7 @@ body .recent_works .middle .varepprev, body .about_me .middle .varepprev, body .
   z-index: 0;
   -webkit-transform: translate(90%, 45%) rotateY(0deg) rotateX(0deg);
           transform: translate(90%, 45%) rotateY(0deg) rotateX(0deg);
-  background-image: url(/public/images/varepPreview.PNG);
+  background-image: url(/public/images/varepPreview.webp);
 }
 
 body .recent_works .middle .varepprev div, body .about_me .middle .varepprev div, body .contact_me .middle .varepprev div, body .skills_section .middle .varepprev div, body .nav_section .middle .varepprev div {
@@ -568,7 +570,7 @@ body .recent_works .middle .varepprev div, body .about_me .middle .varepprev div
 }
 
 body .recent_works .middle .reactsite, body .about_me .middle .reactsite, body .contact_me .middle .reactsite, body .skills_section .middle .reactsite, body .nav_section .middle .reactsite {
-  background-image: url(/public/images/reactsite.PNG);
+  background-image: url(/public/images/reactsite.webp);
   height: 13vw;
   width: 23vw;
   -webkit-transform: translate(90%, -150%);
@@ -580,7 +582,7 @@ body .recent_works .middle .reactsite div, body .about_me .middle .reactsite div
 }
 
 body .recent_works .middle .intsite, body .about_me .middle .intsite, body .contact_me .middle .intsite, body .skills_section .middle .intsite, body .nav_section .middle .intsite {
-  background-image: url(/public/images/interactiveprev.PNG);
+  background-image: url(/public/images/interactiveprev.webp);
   height: 13vw;
   width: 23vw;
   -webkit-transform: translate(-190%, -150%);
@@ -593,7 +595,7 @@ body .recent_works .middle .intsite div, body .about_me .middle .intsite div, bo
 }
 
 body .recent_works .middle .gameprev, body .about_me .middle .gameprev, body .contact_me .middle .gameprev, body .skills_section .middle .gameprev, body .nav_section .middle .gameprev {
-  background-image: url(/public/images/gameprev.PNG);
+  background-image: url(/public/images/gameprev.webp);
   height: 13vw;
   width: 13vw;
   background-size: 101% 101%;
@@ -616,7 +618,7 @@ body .recent_works .middle .paintedsite, body .about_me .middle .paintedsite, bo
   z-index: 0;
   -webkit-transform: translate(-190%, 45%);
           transform: translate(-190%, 45%);
-  background-image: url(/public/images/animateprev.PNG);
+  background-image: url(/public/images/animateprev.webp);
 }
 
 body .recent_works .middle .paintedsite div, body .about_me .middle .paintedsite div, body .contact_me .middle .paintedsite div, body .skills_section .middle .paintedsite div, body .nav_section .middle .paintedsite div {
@@ -633,6 +635,7 @@ body .recent_works .bottom.row, body .about_me .bottom.row, body .contact_me .bo
 }
 
 body .recent_works .bottom.row div, body .about_me .bottom.row div, body .contact_me .bottom.row div, body .skills_section .bottom.row div, body .nav_section .bottom.row div {
+  opacity: .3;
   position: relative;
   z-index: 1000;
   border-radius: 100%;
@@ -730,32 +733,32 @@ body .nav_section .row .goskills {
           transform: translate(-190%, -70%) rotate(-90deg);
 }
 
-body .about_me {
+body .about_me, body .contact_me {
   -webkit-transform: rotateX(90deg) translate(0%, 150%) translateZ(200px);
           transform: rotateX(90deg) translate(0%, 150%) translateZ(200px);
 }
 
-body .about_me .row i {
+body .about_me .row i, body .contact_me .row i {
   z-index: 1;
 }
 
-body .about_me .row .down {
+body .about_me .row .down, body .contact_me .row .down {
   background-color: white !important;
 }
 
-body .about_me .row .left {
+body .about_me .row .left, body .contact_me .row .left {
   background-color: rgba(255, 255, 255, 0.479) !important;
 }
 
-body .about_me .row .up {
+body .about_me .row .up, body .contact_me .row .up {
   background-color: rgba(255, 255, 255, 0.479) !important;
 }
 
-body .about_me .row .right {
+body .about_me .row .right, body .contact_me .row .right {
   background-color: rgba(255, 255, 255, 0.479) !important;
 }
 
-body .about_me .middle {
+body .about_me .middle, body .contact_me .middle {
   height: inherit;
   -webkit-box-align: start;
       -ms-flex-align: start;
@@ -776,7 +779,7 @@ body .about_me .middle {
           flex-direction: row;
 }
 
-body .about_me .middle div {
+body .about_me .middle div, body .contact_me .middle div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -797,7 +800,7 @@ body .about_me .middle div {
           justify-content: space-between;
 }
 
-body .about_me .middle div p {
+body .about_me .middle div p, body .contact_me .middle div p {
   width: 100%;
   height: 100%;
   display: -webkit-box;
@@ -821,7 +824,7 @@ body .about_me .middle div p {
           transform: translate(-3%, -3%);
 }
 
-body .about_me .middle div .rightside {
+body .about_me .middle div .rightside, body .contact_me .middle div .rightside {
   -webkit-box-pack: end;
       -ms-flex-pack: end;
           justify-content: flex-end;
@@ -830,30 +833,30 @@ body .about_me .middle div .rightside {
           transform: translate(3%);
 }
 
-body .about_me .middle div img {
+body .about_me .middle div img, body .contact_me .middle div img {
   position: absolute;
   width: 20vw;
 }
 
-body .about_me .middle div .family {
+body .about_me .middle div .family, body .contact_me .middle div .family {
   left: 0;
   bottom: 0;
   -webkit-transform: translate(-25%, 25%);
           transform: translate(-25%, 25%);
 }
 
-body .about_me .middle div .guitar {
+body .about_me .middle div .guitar, body .contact_me .middle div .guitar {
   left: 0;
   bottom: 0;
   -webkit-transform: translate(35%, -25%) rotate(-10deg);
           transform: translate(35%, -25%) rotate(-10deg);
 }
 
-body .about_me .middle .left_inner {
+body .about_me .middle .left_inner, body .contact_me .middle .left_inner {
   position: relative;
 }
 
-body .about_me .middle .left_inner .descwords {
+body .about_me .middle .left_inner .descwords, body .contact_me .middle .left_inner .descwords {
   position: absolute;
   width: auto;
   height: auto;
@@ -866,11 +869,11 @@ body .about_me .middle .left_inner .descwords {
           transform: rotate(0deg) translate(-8%, 0%);
 }
 
-body .about_me .middle .right_inner {
+body .about_me .middle .right_inner, body .contact_me .middle .right_inner {
   position: relative;
 }
 
-body .about_me .middle .right_inner .descwords {
+body .about_me .middle .right_inner .descwords, body .contact_me .middle .right_inner .descwords {
   -webkit-transform: rotate(0deg) translate(5%, -10%);
           transform: rotate(0deg) translate(5%, -10%);
   position: absolute;
@@ -883,7 +886,7 @@ body .about_me .middle .right_inner .descwords {
           align-items: flex-end;
 }
 
-body .about_me .middle .inner h3 {
+body .about_me .middle .inner h3, body .contact_me .middle .inner h3 {
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   font-size: 3vw;
@@ -909,6 +912,228 @@ body .contact_me .row .up {
 
 body .contact_me .row .right {
   background-color: white !important;
+}
+
+body .contact_me .middle {
+  height: inherit;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  width: 90% !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+
+body .contact_me .middle div {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+}
+
+body .contact_me .middle div p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: auto;
+  width: 100% !important;
+  font-size: 2.2vw !important;
+  position: static !important;
+  -webkit-transform: translate(0, -50%) !important;
+          transform: translate(0, -50%) !important;
+}
+
+body .contact_me .middle .left_inner {
+  position: relative;
+}
+
+body .contact_me .middle .right_inner {
+  position: relative;
+}
+
+body .contact_me .middle .right_inner form {
+  width: 88%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-transform: translate(0, 40%);
+          transform: translate(0, 40%);
+}
+
+body .contact_me .middle .right_inner form span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  width: 30%;
+}
+
+body .contact_me .middle .right_inner form span input, body .contact_me .middle .right_inner form span textarea {
+  max-height: 2rem;
+  padding: .5rem;
+  width: 100%;
+  background: white;
+  border: none;
+  margin: 0% 5%;
+  font-weight: bolder;
+  color: black;
+  padding: none !important;
+}
+
+body .contact_me .middle .right_inner form span input::after, body .contact_me .middle .right_inner form span textarea::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  background: red;
+  width: 100%;
+  height: 10rem;
+}
+
+body .contact_me .middle .right_inner form .spanmessage {
+  width: 50%;
+}
+
+body .contact_me .middle .right_inner form #submit {
+  background: #3700ffaf;
+  height: 2rem;
+  padding: 0% 1%;
+  color: white;
+  border: none;
+}
+
+body .contact_me .middle .right_inner form #submit:hover {
+  background: #3700FF;
+  cursor: pointer;
+}
+
+body .contact_me .middle .getintouch {
+  width: 88%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+body .contact_me .middle .getintouch a {
+  position: static !important;
+  text-align: center;
+  color: white;
+  -webkit-transform: translate(0%, 10%);
+          transform: translate(0%, 10%);
+  font-size: 1.25vw;
+  text-decoration: none;
+  border-bottom: none;
+  z-index: 1;
+  padding: 1%;
+}
+
+body .contact_me .middle .getintouch a i {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+body .contact_me .middle .getintouch a::after {
+  background: #3700FF;
+  width: 100%;
+  position: absolute;
+  content: '';
+  bottom: 0;
+  left: 0;
+  height: 5%;
+  z-index: -1;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+
+body .contact_me .middle .getintouch a:hover {
+  text-shadow: 0 0 1rem black;
+}
+
+body .contact_me .middle .getintouch a:hover::after {
+  height: 100%;
+}
+
+body .contact_me .middle .getintouch a:hover i {
+  -webkit-transform: rotate(360deg);
+          transform: rotate(360deg);
+}
+
+body .contact_me .middle .getintouch a * {
+  font-size: 3vw;
+}
+
+body .contact_me .middle .inner h3 {
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+  font-size: 3vw;
+  color: #4815ff;
 }
 
 body .skills_section {
