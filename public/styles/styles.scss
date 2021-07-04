@@ -689,7 +689,7 @@ body{
                     width: 88%;
                     @include flexRow();
                     justify-content: space-between;
-                    transform: translate(0,40%);
+                    transform: translate(0,50%);
                     span{
                         @include flexRow();
                         width: 30%;
@@ -703,7 +703,7 @@ body{
                             font-weight: bolder;
                             color: black;
                             padding: none !important;
-                            
+                            font-family: arial;
                             &::after{
                                 content: '';
                                 position:  absolute;
@@ -723,9 +723,11 @@ body{
                         padding: 0% 1%;
                         color: white;
                         border: none;
+                        transition: all ease .5s;
                         &:hover{
                            background: #3700FF;
                            cursor: pointer;
+                           border-radius: .5rem;
                         }
                     }
                 }

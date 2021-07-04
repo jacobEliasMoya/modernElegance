@@ -1000,8 +1000,8 @@ body .contact_me .middle .right_inner form {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-transform: translate(0, 40%);
-          transform: translate(0, 40%);
+  -webkit-transform: translate(0, 50%);
+          transform: translate(0, 50%);
 }
 
 body .contact_me .middle .right_inner form span {
@@ -1031,6 +1031,7 @@ body .contact_me .middle .right_inner form span input, body .contact_me .middle 
   font-weight: bolder;
   color: black;
   padding: none !important;
+  font-family: arial;
 }
 
 body .contact_me .middle .right_inner form span input::after, body .contact_me .middle .right_inner form span textarea::after {
@@ -1052,11 +1053,14 @@ body .contact_me .middle .right_inner form #submit {
   padding: 0% 1%;
   color: white;
   border: none;
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
 }
 
 body .contact_me .middle .right_inner form #submit:hover {
   background: #3700FF;
   cursor: pointer;
+  border-radius: .5rem;
 }
 
 body .contact_me .middle .getintouch {
