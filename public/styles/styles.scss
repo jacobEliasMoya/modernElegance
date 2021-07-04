@@ -689,7 +689,7 @@ body{
                     width: 88%;
                     @include flexRow();
                     justify-content: space-between;
-                    transform: translate(0,50%);
+                    transform: translate(0,80%);
                     span{
                         @include flexRow();
                         width: 30%;
