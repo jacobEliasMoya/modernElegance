@@ -240,15 +240,19 @@
     <script>
         // email sender function    from emailjs
         document.getElementById('mainform').addEventListener('submit', function(event) {
-        const serviceID = 'default_service';
-        const templateID = 'template_z1yzixq';
-
-        emailjs.sendForm(serviceID, templateID, this)
-            .then(() => {
-                console.log('ok')
-            }, (err) => {
-                console.log(err)
-            });
+            const serviceID = 'default_service';
+            const templateID = 'template_z1yzixq';
+            if(document.querySelector('#email').value === '' || document.querySelector('#message').value === ''){
+                event.preventDefault();
+                alert('error, please fill in all fields!');
+            } else {
+                emailjs.sendForm(serviceID, templateID, this)
+                .then(() => {
+                    console.log('ok')
+                }, (err) => {
+                    console.log(err)
+                });
+            }
         });
     </script>
     <!-- <script src="./js/rotate.js"></script> -->
