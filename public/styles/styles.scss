@@ -699,10 +699,9 @@ body{
                             width: 100%;
                             background: white;
                             border: none;
-                            margin: 0% 5%;
+                            margin-left:1rem;
                             font-weight: bolder;
                             color: black;
-                            padding: none !important;
                             font-family: arial;
                             &::after{
                                 content: '';

@@ -1027,10 +1027,9 @@ body .contact_me .middle .right_inner form span input, body .contact_me .middle 
   width: 100%;
   background: white;
   border: none;
-  margin: 0% 5%;
+  margin-left: 1rem;
   font-weight: bolder;
   color: black;
-  padding: none !important;
   font-family: arial;
 }
 
