@@ -14,10 +14,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Rock+Salt&display=swap" rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&display=swap" rel="stylesheet">
     <link rel="shortcut icon" type="image/jpg" href="/public/images/logofavi.webp">
     <link rel="stylesheet" href="/public/styles/styles.css">
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+    <script type="text/javascript">
+        (function() {
+        emailjs.init("user_7OKIs1o4YjuagymaEweYO");
+        })();
+    </script>
     <title>Jacob Moya</title>
 </head>
 <body>
@@ -165,7 +171,7 @@
             </div>
             <div class="getintouch"><a class="contacttype" href="tel:9096446073"><i class="contacter fa fa-phone"></i>Call Me</a><a class="contacttype" href="mailto:jmoya@jacobmoya.com"><i class="contacter fa fa-envelope"></i>Email Me</a></div>
             <div class="right_inner inner">
-                <form action="./public/php/contactform.php" method="POST">
+                <form id="mainform">
                     <span>Email
                         <input type="email" name="email" id="email" placeholder="Please enter your email!">
                     </span>
@@ -231,6 +237,20 @@
     <script src="/public/js/pagenav.js"></script>
     <script src="/public/js/projRotate.js"></script>
     <script src="/public/js/hamburgerNav.js"></script>
+    <script>
+        // email sender function    from emailjs
+        document.getElementById('mainform').addEventListener('submit', function(event) {
+        const serviceID = 'default_service';
+        const templateID = 'template_z1yzixq';
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                console.log('ok')
+            }, (err) => {
+                console.log(err)
+            });
+        });
+    </script>
     <!-- <script src="./js/rotate.js"></script> -->
 </body>
 </html>

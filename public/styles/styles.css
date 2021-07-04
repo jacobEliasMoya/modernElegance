@@ -968,7 +968,7 @@ body .contact_me .middle div p {
           flex-direction: column;
   height: auto;
   width: 100% !important;
-  font-size: 2.2vw !important;
+  font-size: 2vw !important;
   position: static !important;
   -webkit-transform: translate(0, -50%) !important;
           transform: translate(0, -50%) !important;
