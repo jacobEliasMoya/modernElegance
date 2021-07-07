@@ -1140,6 +1140,8 @@ body .contact_me .middle .inner h3 {
 }
 
 body .skills_section {
+  -webkit-transform: rotate(0deg);
+          transform: rotate(0deg);
   -webkit-transform: rotateX(-90deg) translate(0%, -150%) translateZ(200px);
           transform: rotateX(-90deg) translate(0%, -150%) translateZ(200px);
 }
@@ -1158,5 +1160,57 @@ body .skills_section .row .up {
 
 body .skills_section .row .right {
   background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .skills_section .middle img {
+  width: 10vw;
+  border-radius: 100%;
+  border: .5vw solid #3700FF;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  -webkit-transition: all ease .5s;
+  transition: all ease .5s;
+}
+
+body .skills_section .middle img:hover {
+  -webkit-box-shadow: 0 0 1rem 1rem #3700ff88;
+          box-shadow: 0 0 1rem 1rem #3700ff88;
+}
+
+body .skills_section .middle .html {
+  -webkit-transform: translate(-465%, -205%);
+          transform: translate(-465%, -205%);
+}
+
+body .skills_section .middle .css {
+  -webkit-transform: translate(-500%, -303%);
+          transform: translate(-500%, -303%);
+  width: 7vw;
+}
+
+body .skills_section .middle .sass {
+  -webkit-transform: translate(-675%, -130%);
+          transform: translate(-675%, -130%);
+  width: 7vw;
+}
+
+body .skills_section .middle .javascript {
+  -webkit-transform: translate(365%, 95%);
+          transform: translate(365%, 95%);
+}
+
+body .skills_section .middle .react {
+  -webkit-transform: translate(575%, 15%);
+          transform: translate(575%, 15%);
+  width: 7vw;
+}
+
+body .skills_section .middle .wordpress {
+  -webkit-transform: translate(400%, 190%);
+          transform: translate(400%, 190%);
+  width: 7vw;
 }
 /*# sourceMappingURL=styles.css.map */

@@ -789,6 +789,7 @@ body{
     }    
 
     .skills_section{
+        transform: rotate(0deg);
         transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);
         .row{
             .down{
@@ -804,5 +805,47 @@ body{
                 background-color: rgba(255, 255, 255, 0.479) !important;
             }        
         }
+        .middle{
+            img{
+                width: 10vw;
+                border-radius: 100%;
+                border: .5vw solid #3700FF;
+                @include absCentered();
+                transition: all ease .5s;
+
+                &:hover{
+                    box-shadow: 0 0 1rem 1rem #3700ff88;
+                }
+                // hmmm
+            }
+
+            .html{
+                transform: translate(-465%,-205%);
+            }
+            .css{
+                transform: translate(-500%,-303%);
+                width: 7vw;
+
+            }
+            .sass{
+                transform: translate(-675%,-130%);
+                width: 7vw;
+
+            }
+            .javascript{
+                transform: translate(365%,95%);
+
+            }
+            .react{
+                transform: translate(575%,15%);
+                width: 7vw;
+            }
+            .wordpress{
+                transform: translate(400%,190%);
+                width: 7vw;
+            }
+
+        }
+
     }
 }
