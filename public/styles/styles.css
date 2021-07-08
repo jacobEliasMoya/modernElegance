@@ -671,7 +671,7 @@ body .recent_works .bottom.row .mid, body .about_me .bottom.row .mid, body .cont
   background-color: rgba(255, 255, 255, 0.479) !important;
 }
 
-body .recent_works .top i {
+body .recent_works .top {
   z-index: 100;
 }
 

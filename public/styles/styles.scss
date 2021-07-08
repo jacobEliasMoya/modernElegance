@@ -522,7 +522,7 @@ body{
     }
     .recent_works{
         .top{
-            i{z-index: 100;}
+            z-index: 100;
         }
         .middle{
             position: absolute;
