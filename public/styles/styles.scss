@@ -102,7 +102,7 @@ body{
 
         .navigationIcons{
             @include absCentered();
-            font-size: 2rem;
+            font-size: 2.5vw;
             display: none;
             text-shadow: 0 0 1rem white;
             color: white;
@@ -195,7 +195,7 @@ body{
             transform: translateZ(10px);
 
             i{
-                font-size: 2rem;
+                font-size: 2vw;
                 transition: all ease .5s;
                 border-bottom-left-radius: 50%;
                 border-bottom-right-radius: 50%;
@@ -208,6 +208,7 @@ body{
             }
             h2{
                 transform: translate(-10%,-75%) translateZ(1px);
+                font-size: 1.5vw;
 
             }
 
@@ -218,13 +219,13 @@ body{
         }
 
         .middle{
-            font-size: 3rem;
 
             .design,.develop{
                 position: relative;
                 transition: all ease .25s;
                 letter-spacing: 2px;
                 transform: translateZ(-1px);
+                font-size: 4vw;
 
                 &::after{
                     transition: all ease .25s;
@@ -238,7 +239,7 @@ body{
                     border-radius: .5rem;
                 }
                 &::first-letter{
-                    font-size: 5rem;
+                    font-size: 5vw;
                 }
             }
 
@@ -265,8 +266,8 @@ body{
                 position: relative;
                 z-index: 1000;
                 border-radius: 100%;
-                height: .75rem;
-                width: .75rem;
+                height: .75vw;
+                width: .75vw;
                 background-color: rgba(255, 255, 255, 0.479);
                 cursor: none;
                 transition: all ease .5s;
@@ -300,14 +301,15 @@ body{
         background-color: black !important;
         transition: all ease 1.75s;
         color: white;
-        transform: rotateY(90deg) translate(-300%) translateZ(100px);
+        transform: rotateY(90deg) translate(-150%) translateZ(100px);
+        // transform: rotateY(00deg);
         top:0;
         left: 0;
         .row{
             @include flexRow();
             justify-content: space-between;
             i:not(.contacter){
-                font-size: 2rem;
+                font-size: 2vw;
                 transition: all ease .5s;
                 border-bottom-left-radius: 50%;
                 border-bottom-right-radius: 50%;
@@ -322,6 +324,7 @@ body{
         .top,.middle{
             width: 100%;
             justify-content: flex-end;
+
             h2{
                 transform: translateZ(10px);
                 text-align: center;
@@ -377,7 +380,6 @@ body{
                 transition: all ease .75s;
                 cursor: none;
                 @include flexCol();
-                @include absCentered();
                 text-decoration: none;
                 text-align: center;
                 overflow: hidden;
@@ -387,6 +389,7 @@ body{
                 background-position: center;
                 cursor: pointer;
                 perspective: 10px;
+                position: absolute;
                 div{
                     @include flexCol();
                     background:#3700ffab !important;
@@ -397,9 +400,10 @@ body{
                     opacity: 0;
                     h1,h6{
                         text-shadow: 0 0 1rem black;
+                        font-size: 1vw;
                     }
                     h1{
-                        font-size: 3vw;
+                        font-size: 2.5vw;
                         line-height: 1;
                     }
                 }
@@ -413,11 +417,15 @@ body{
                 }
             }
             .varepprev{
-                @include absCentered();
-                height: 13vw;
-                width: 23vw;
+                height: 10vw;
+                width: 20vw;
                 z-index: 0;
-                transform: translate(90%,45%) rotateY(0deg) rotateX(0deg);
+                bottom: 0;
+                right   : 0;
+                transform: translate(-20%,-50%);
+
+
+                // transform: translate(90%,45%) rotateY(0deg) rotateX(0deg);
                 background-image: url(/public/images/varepPreview.webp);
                 div{
                     background:#305fb1c4;
@@ -426,19 +434,24 @@ body{
             }
             .reactsite{
                 background-image: url(/public/images/reactsite.webp);
-                height: 13vw;
-                width: 23vw;
+                height: 10vw;
+                width: 20vw;
+                top: 0;
+                right: 0;
+                transform: translate(-20%,50%);
 
-                transform: translate(90%,-150%);
+                // transform: translate(90%,-150%);
                 div{
                     background:rgba(111, 26, 160, 0.671);
                 }
             }
             .intsite{
                 background-image: url(/public/images/interactiveprev.webp);
-                height: 13vw;
-                width: 23vw;
-                transform: translate(-190%,-150%);
+                height: 10vw;
+                width: 20vw;
+                top: 0;
+                left: 0;
+                transform: translate(20%,50%);
                 background-size: 101% 101%;
                 div{
                     background:rgba(0, 255, 0, 0.178);
@@ -446,20 +459,25 @@ body{
             }
             .gameprev{
                 background-image: url(/public/images/gameprev.webp);
-                height: 13vw;
-                width: 13vw;
+                height: 10vw;
+                width: 10vw;
                 background-size: 101% 101%;
-                transform: translate(-50%,-150%);
+                top: 0;
+                left: 50%;
+                transform: translate(-50%,50%);
+
                 div{
                     background:rgba(0, 0, 255, 0.308);
                 }
             }            
             .paintedsite{
-                @include absCentered();
-                height: 13vw;
-                width: 23vw;
+                height: 10vw;
+                width: 20vw;
                 z-index: 0;
-                transform: translate(-190%,45%);                
+                bottom: 0;
+                left: 0;
+                transform: translate(20%,-50%);
+                // transform: translate(-190%,45%);                
                 background-image: url(/public/images/animateprev.webp);
                 div{
                     background:#585858c4;
@@ -477,8 +495,8 @@ body{
                 position: relative;
                 z-index: 1000;
                 border-radius: 100%;
-                height: .75rem;
-                width: .75rem;
+                height: .75vw;
+                width: .75vw;
                 background-color: rgba(255, 255, 255, 0.479);
                 cursor: none;
                 transition: all ease .5s;
@@ -502,7 +520,16 @@ body{
             }
         }
     }
-
+    .recent_works{
+        .top{
+            i{z-index: 100;}
+        }
+        .middle{
+            position: absolute;
+            @include absCentered();
+            @include fullScreener();
+        }
+    }
     .nav_section{
         z-index: 3;
         cursor: default;
@@ -647,7 +674,7 @@ body{
     }
 
     .contact_me{
-        transform: rotateY(-90deg) translate(300%) translateZ(100px) ;
+        transform: rotateY(-90deg) translate(200%) translateZ(100px) ;
         // transform: none;
         .row{
             .down{
@@ -805,44 +832,73 @@ body{
                 background-color: rgba(255, 255, 255, 0.479) !important;
             }        
         }
+        .top{
+            z-index: 1000 !important;
+
+        };
         .middle{
+            @include fullScreener();
+            min-height: auto !important;
+            @include absCentered();
             img{
                 width: 10vw;
                 border-radius: 100%;
                 border: .5vw solid #3700FF;
-                @include absCentered();
                 transition: all ease .5s;
+                position: absolute;
 
                 &:hover{
                     box-shadow: 0 0 1rem 1rem #3700ff88;
                 }
                 // hmmm
             }
-
+            span{
+                @include flexRow();
+                position: absolute;
+                top: 12.5%;
+                left: 25%;
+                h3{
+                    font-size: 2vw;
+                    margin-right: 1.75vw;
+                }
+            }
+            .skillset.secondary{
+                top: 80%;
+                left: 6%;
+            }
             .html{
-                transform: translate(-465%,-205%);
+                transform: translate(15%,25%);
+                left:0;
+                top: 0;
             }
             .css{
-                transform: translate(-500%,-303%);
+                transform: translate(190%,40%);
                 width: 7vw;
-
+                left:0;
+                top: 0;
             }
             .sass{
-                transform: translate(-675%,-130%);
+                transform: translate(25%,205%);
                 width: 7vw;
-
+                left:0;
+                top: 0;
             }
             .javascript{
-                transform: translate(365%,95%);
-
+                transform: translate(-15%,-25%);
+                right: 0;
+                bottom: 0;
             }
             .react{
-                transform: translate(575%,15%);
                 width: 7vw;
+                transform: translate(-190%,-40%);
+                right: 0;
+                bottom: 0;
             }
             .wordpress{
-                transform: translate(400%,190%);
+                transform: translate(-25%,-205%);
                 width: 7vw;
+                right: 0;
+                bottom: 0;
             }
 
         }

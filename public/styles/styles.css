@@ -70,7 +70,7 @@ body .navigationContainer .navigationIcons {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 2rem;
+  font-size: 2.5vw;
   display: none;
   text-shadow: 0 0 1rem white;
   color: white;
@@ -219,7 +219,7 @@ body .the_beginning .row {
 }
 
 body .the_beginning .row i {
-  font-size: 2rem;
+  font-size: 2vw;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   border-bottom-left-radius: 50%;
@@ -237,14 +237,11 @@ body .the_beginning .row i:hover {
 body .the_beginning .row h2 {
   -webkit-transform: translate(-10%, -75%) translateZ(1px);
           transform: translate(-10%, -75%) translateZ(1px);
+  font-size: 1.5vw;
 }
 
 body .the_beginning .top, body .the_beginning .middle {
   width: 100%;
-}
-
-body .the_beginning .middle {
-  font-size: 3rem;
 }
 
 body .the_beginning .middle .design, body .the_beginning .middle .develop {
@@ -254,6 +251,7 @@ body .the_beginning .middle .design, body .the_beginning .middle .develop {
   letter-spacing: 2px;
   -webkit-transform: translateZ(-1px);
           transform: translateZ(-1px);
+  font-size: 4vw;
 }
 
 body .the_beginning .middle .design::after, body .the_beginning .middle .develop::after {
@@ -270,7 +268,7 @@ body .the_beginning .middle .design::after, body .the_beginning .middle .develop
 }
 
 body .the_beginning .middle .design::first-letter, body .the_beginning .middle .develop::first-letter {
-  font-size: 5rem;
+  font-size: 5vw;
 }
 
 body .the_beginning .middle .selected::after {
@@ -297,8 +295,8 @@ body .the_beginning .bottom.row div {
   position: relative;
   z-index: 1000;
   border-radius: 100%;
-  height: .75rem;
-  width: .75rem;
+  height: .75vw;
+  width: .75vw;
   background-color: rgba(255, 255, 255, 0.479);
   cursor: none;
   -webkit-transition: all ease .5s;
@@ -359,8 +357,8 @@ body .recent_works, body .about_me, body .contact_me, body .skills_section, body
   -webkit-transition: all ease 1.75s;
   transition: all ease 1.75s;
   color: white;
-  -webkit-transform: rotateY(90deg) translate(-300%) translateZ(100px);
-          transform: rotateY(90deg) translate(-300%) translateZ(100px);
+  -webkit-transform: rotateY(90deg) translate(-150%) translateZ(100px);
+          transform: rotateY(90deg) translate(-150%) translateZ(100px);
   top: 0;
   left: 0;
 }
@@ -385,7 +383,7 @@ body .recent_works .row, body .about_me .row, body .contact_me .row, body .skill
 }
 
 body .recent_works .row i:not(.contacter), body .about_me .row i:not(.contacter), body .contact_me .row i:not(.contacter), body .skills_section .row i:not(.contacter), body .nav_section .row i:not(.contacter) {
-  font-size: 2rem;
+  font-size: 2vw;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
   border-bottom-left-radius: 50%;
@@ -491,11 +489,6 @@ body .recent_works .middle a, body .about_me .middle a, body .contact_me .middle
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
   text-decoration: none;
   text-align: center;
   overflow: hidden;
@@ -506,6 +499,7 @@ body .recent_works .middle a, body .about_me .middle a, body .contact_me .middle
   cursor: pointer;
   -webkit-perspective: 10px;
           perspective: 10px;
+  position: absolute;
 }
 
 body .recent_works .middle a div, body .about_me .middle a div, body .contact_me .middle a div, body .skills_section .middle a div, body .nav_section .middle a div {
@@ -535,10 +529,11 @@ body .recent_works .middle a div, body .about_me .middle a div, body .contact_me
 
 body .recent_works .middle a div h1, body .recent_works .middle a div h6, body .about_me .middle a div h1, body .about_me .middle a div h6, body .contact_me .middle a div h1, body .contact_me .middle a div h6, body .skills_section .middle a div h1, body .skills_section .middle a div h6, body .nav_section .middle a div h1, body .nav_section .middle a div h6 {
   text-shadow: 0 0 1rem black;
+  font-size: 1vw;
 }
 
 body .recent_works .middle a div h1, body .about_me .middle a div h1, body .contact_me .middle a div h1, body .skills_section .middle a div h1, body .nav_section .middle a div h1 {
-  font-size: 3vw;
+  font-size: 2.5vw;
   line-height: 1;
 }
 
@@ -552,16 +547,13 @@ body .recent_works .middle a:hover div, body .about_me .middle a:hover div, body
 }
 
 body .recent_works .middle .varepprev, body .about_me .middle .varepprev, body .contact_me .middle .varepprev, body .skills_section .middle .varepprev, body .nav_section .middle .varepprev {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: 13vw;
-  width: 23vw;
+  height: 10vw;
+  width: 20vw;
   z-index: 0;
-  -webkit-transform: translate(90%, 45%) rotateY(0deg) rotateX(0deg);
-          transform: translate(90%, 45%) rotateY(0deg) rotateX(0deg);
+  bottom: 0;
+  right: 0;
+  -webkit-transform: translate(-20%, -50%);
+          transform: translate(-20%, -50%);
   background-image: url(/public/images/varepPreview.webp);
 }
 
@@ -571,10 +563,12 @@ body .recent_works .middle .varepprev div, body .about_me .middle .varepprev div
 
 body .recent_works .middle .reactsite, body .about_me .middle .reactsite, body .contact_me .middle .reactsite, body .skills_section .middle .reactsite, body .nav_section .middle .reactsite {
   background-image: url(/public/images/reactsite.webp);
-  height: 13vw;
-  width: 23vw;
-  -webkit-transform: translate(90%, -150%);
-          transform: translate(90%, -150%);
+  height: 10vw;
+  width: 20vw;
+  top: 0;
+  right: 0;
+  -webkit-transform: translate(-20%, 50%);
+          transform: translate(-20%, 50%);
 }
 
 body .recent_works .middle .reactsite div, body .about_me .middle .reactsite div, body .contact_me .middle .reactsite div, body .skills_section .middle .reactsite div, body .nav_section .middle .reactsite div {
@@ -583,10 +577,12 @@ body .recent_works .middle .reactsite div, body .about_me .middle .reactsite div
 
 body .recent_works .middle .intsite, body .about_me .middle .intsite, body .contact_me .middle .intsite, body .skills_section .middle .intsite, body .nav_section .middle .intsite {
   background-image: url(/public/images/interactiveprev.webp);
-  height: 13vw;
-  width: 23vw;
-  -webkit-transform: translate(-190%, -150%);
-          transform: translate(-190%, -150%);
+  height: 10vw;
+  width: 20vw;
+  top: 0;
+  left: 0;
+  -webkit-transform: translate(20%, 50%);
+          transform: translate(20%, 50%);
   background-size: 101% 101%;
 }
 
@@ -596,11 +592,13 @@ body .recent_works .middle .intsite div, body .about_me .middle .intsite div, bo
 
 body .recent_works .middle .gameprev, body .about_me .middle .gameprev, body .contact_me .middle .gameprev, body .skills_section .middle .gameprev, body .nav_section .middle .gameprev {
   background-image: url(/public/images/gameprev.webp);
-  height: 13vw;
-  width: 13vw;
+  height: 10vw;
+  width: 10vw;
   background-size: 101% 101%;
-  -webkit-transform: translate(-50%, -150%);
-          transform: translate(-50%, -150%);
+  top: 0;
+  left: 50%;
+  -webkit-transform: translate(-50%, 50%);
+          transform: translate(-50%, 50%);
 }
 
 body .recent_works .middle .gameprev div, body .about_me .middle .gameprev div, body .contact_me .middle .gameprev div, body .skills_section .middle .gameprev div, body .nav_section .middle .gameprev div {
@@ -608,16 +606,13 @@ body .recent_works .middle .gameprev div, body .about_me .middle .gameprev div, 
 }
 
 body .recent_works .middle .paintedsite, body .about_me .middle .paintedsite, body .contact_me .middle .paintedsite, body .skills_section .middle .paintedsite, body .nav_section .middle .paintedsite {
-  position: absolute;
-  left: 50%;
-  top: 50%;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
-  height: 13vw;
-  width: 23vw;
+  height: 10vw;
+  width: 20vw;
   z-index: 0;
-  -webkit-transform: translate(-190%, 45%);
-          transform: translate(-190%, 45%);
+  bottom: 0;
+  left: 0;
+  -webkit-transform: translate(20%, -50%);
+          transform: translate(20%, -50%);
   background-image: url(/public/images/animateprev.webp);
 }
 
@@ -639,8 +634,8 @@ body .recent_works .bottom.row div, body .about_me .bottom.row div, body .contac
   position: relative;
   z-index: 1000;
   border-radius: 100%;
-  height: .75rem;
-  width: .75rem;
+  height: .75vw;
+  width: .75vw;
   background-color: rgba(255, 255, 255, 0.479);
   cursor: none;
   -webkit-transition: all ease .5s;
@@ -674,6 +669,21 @@ body .recent_works .bottom.row .left, body .about_me .bottom.row .left, body .co
 
 body .recent_works .bottom.row .mid, body .about_me .bottom.row .mid, body .contact_me .bottom.row .mid, body .skills_section .bottom.row .mid, body .nav_section .bottom.row .mid {
   background-color: rgba(255, 255, 255, 0.479) !important;
+}
+
+body .recent_works .top i {
+  z-index: 100;
+}
+
+body .recent_works .middle {
+  position: absolute;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  height: 100vh;
+  width: 100%;
 }
 
 body .nav_section {
@@ -894,8 +904,8 @@ body .about_me .middle .inner h3, body .contact_me .middle .inner h3 {
 }
 
 body .contact_me {
-  -webkit-transform: rotateY(-90deg) translate(300%) translateZ(100px);
-          transform: rotateY(-90deg) translate(300%) translateZ(100px);
+  -webkit-transform: rotateY(-90deg) translate(200%) translateZ(100px);
+          transform: rotateY(-90deg) translate(200%) translateZ(100px);
 }
 
 body .contact_me .row .down {
@@ -1162,17 +1172,28 @@ body .skills_section .row .right {
   background-color: rgba(255, 255, 255, 0.479) !important;
 }
 
-body .skills_section .middle img {
-  width: 10vw;
-  border-radius: 100%;
-  border: .5vw solid #3700FF;
+body .skills_section .top {
+  z-index: 1000 !important;
+}
+
+body .skills_section .middle {
+  height: 100vh;
+  width: 100%;
+  min-height: auto !important;
   position: absolute;
   left: 50%;
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+body .skills_section .middle img {
+  width: 10vw;
+  border-radius: 100%;
+  border: .5vw solid #3700FF;
   -webkit-transition: all ease .5s;
   transition: all ease .5s;
+  position: absolute;
 }
 
 body .skills_section .middle img:hover {
@@ -1180,37 +1201,78 @@ body .skills_section .middle img:hover {
           box-shadow: 0 0 1rem 1rem #3700ff88;
 }
 
+body .skills_section .middle span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  position: absolute;
+  top: 12.5%;
+  left: 25%;
+}
+
+body .skills_section .middle span h3 {
+  font-size: 2vw;
+  margin-right: 1.75vw;
+}
+
+body .skills_section .middle .skillset.secondary {
+  top: 80%;
+  left: 6%;
+}
+
 body .skills_section .middle .html {
-  -webkit-transform: translate(-465%, -205%);
-          transform: translate(-465%, -205%);
+  -webkit-transform: translate(15%, 25%);
+          transform: translate(15%, 25%);
+  left: 0;
+  top: 0;
 }
 
 body .skills_section .middle .css {
-  -webkit-transform: translate(-500%, -303%);
-          transform: translate(-500%, -303%);
+  -webkit-transform: translate(190%, 40%);
+          transform: translate(190%, 40%);
   width: 7vw;
+  left: 0;
+  top: 0;
 }
 
 body .skills_section .middle .sass {
-  -webkit-transform: translate(-675%, -130%);
-          transform: translate(-675%, -130%);
+  -webkit-transform: translate(25%, 205%);
+          transform: translate(25%, 205%);
   width: 7vw;
+  left: 0;
+  top: 0;
 }
 
 body .skills_section .middle .javascript {
-  -webkit-transform: translate(365%, 95%);
-          transform: translate(365%, 95%);
+  -webkit-transform: translate(-15%, -25%);
+          transform: translate(-15%, -25%);
+  right: 0;
+  bottom: 0;
 }
 
 body .skills_section .middle .react {
-  -webkit-transform: translate(575%, 15%);
-          transform: translate(575%, 15%);
   width: 7vw;
+  -webkit-transform: translate(-190%, -40%);
+          transform: translate(-190%, -40%);
+  right: 0;
+  bottom: 0;
 }
 
 body .skills_section .middle .wordpress {
-  -webkit-transform: translate(400%, 190%);
-          transform: translate(400%, 190%);
+  -webkit-transform: translate(-25%, -205%);
+          transform: translate(-25%, -205%);
   width: 7vw;
+  right: 0;
+  bottom: 0;
 }
 /*# sourceMappingURL=styles.css.map */
