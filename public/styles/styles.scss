@@ -816,7 +816,7 @@ body{
     }    
 
     .skills_section{
-        transform: rotate(0deg);
+        transform: rotate(0deg) !important; 
         transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);
         .row{
             .down{
