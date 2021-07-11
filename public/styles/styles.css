@@ -1306,6 +1306,96 @@ body .skills_section .middle .wordpress {
     height: 1.5vw !important;
     width: 1.5vw !important;
   }
+  .recent_works .top i, .about_me .top i, .contact_me .top i, .skills_section .top i, .nav_section .top i {
+    font-size: 5vw !important;
+    -webkit-transform: translate(0%, 0%) translateZ(1px) !important;
+            transform: translate(0%, 0%) translateZ(1px) !important;
+  }
+  .recent_works .bottom.row, .about_me .bottom.row, .contact_me .bottom.row, .skills_section .bottom.row, .nav_section .bottom.row {
+    width: 6% !important;
+  }
+  .recent_works .bottom.row div, .about_me .bottom.row div, .contact_me .bottom.row div, .skills_section .bottom.row div, .nav_section .bottom.row div {
+    height: 1.5vw !important;
+    width: 1.5vw !important;
+  }
+  .recent_works .middle {
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: 80vh !important;
+  }
+  .recent_works .middle h2, .recent_works .middle p, .recent_works .middle a {
+    position: static !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .recent_works .middle h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    width: 100% !important;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+    line-height: 1;
+    font-size: 8vw !important;
+  }
+  .recent_works .middle h2 span {
+    font-size: 5vw !important;
+  }
+  .recent_works .middle span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+  }
+  .recent_works .middle p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100% !important;
+    font-size: 4vw !important;
+    margin: 5% 0% !important;
+  }
+  .recent_works .middle p a {
+    width: 30% !important;
+  }
+  .recent_works .middle .gameprev {
+    display: none !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1346,6 +1436,95 @@ body .skills_section .middle .wordpress {
   .the_beginning .bottom.row div {
     height: 3vw !important;
     width: 3vw !important;
+  }
+  .recent_works .top i, .about_me .top i, .contact_me .top i, .skills_section .top i, .nav_section .top i {
+    font-size: 8vw !important;
+    -webkit-transform: translate(0%, 0%) translateZ(1px) !important;
+            transform: translate(0%, 0%) translateZ(1px) !important;
+  }
+  .recent_works .bottom.row, .about_me .bottom.row, .contact_me .bottom.row, .skills_section .bottom.row, .nav_section .bottom.row {
+    width: 13% !important;
+  }
+  .recent_works .bottom.row div, .about_me .bottom.row div, .contact_me .bottom.row div, .skills_section .bottom.row div, .nav_section .bottom.row div {
+    height: 3vw !important;
+    width: 3vw !important;
+  }
+  .recent_works .middle {
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    height: 80vh !important;
+  }
+  .recent_works .middle h2, .recent_works .middle p, .recent_works .middle a {
+    position: static !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .recent_works .middle h2 {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100% !important;
+    align-items: center !important;
+    line-height: 1;
+    font-size: 10vw !important;
+  }
+  .recent_works .middle h2 span {
+    font-size: 10vw !important;
+  }
+  .recent_works .middle span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .recent_works .middle span a {
+    width: 50vw !important;
+    height: 10vh !important;
+  }
+  .recent_works .middle p {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    width: 100% !important;
+    font-size: 5vw !important;
+    margin: 5% 0% !important;
+  }
+  .recent_works .middle p a {
+    width: 50% !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */

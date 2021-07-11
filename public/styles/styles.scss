@@ -816,7 +816,7 @@ body{
     }    
 
     .skills_section{
-        transform: rotate(0deg) !important; 
+        transform: rotate(0deg);
         transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);
         .row{
             .down{
@@ -905,87 +905,192 @@ body{
 
     }
 }
-// adding changes
-// @media only screen and (max-width: 1000px) {
+@media only screen and (max-width: 1000px) {
 
-//     .the_beginning{
+    .the_beginning{
        
-//         .imgs_container{
-//             height: 50vh !important;
-//             width: 50vh !important;
-//             transform: translate(-30%,-50%) !important;
-//         }
-//         .row{
-//             i{
-//                 font-size: 5vw !important;
-//                 transform: translate(0%,0%) translateZ(1px) !important;
-//             }
-//             h2{
-//                 transform: translate(0%,0%) translateZ(1px) !important;
-//                 font-size: 4.5vw !important;
-//             }
-//         }
-//         .middle{
-//             // flex-direction: column !important;
-//             .design,.develop{
-//                 font-size: 7vw !important;
-//                 &::first-letter{
-//                     font-size: 8vw !important;
-//                 }
-//             }
-//             // .develop{
-//             //     margin-bottom: 5rem !important;
-//             // }
-//         }
-//         .bottom.row{
-//             width: 6% !important;
-//             div{
-//                 height: 1.5vw !important;
-//                 width: 1.5vw !important;
-//             }
-//         }
-//     }
+        .imgs_container{
+            height: 50vh !important;
+            width: 50vh !important;
+            transform: translate(-30%,-50%) !important;
+        }
+        .row{
+            i{
+                font-size: 5vw !important;
+                transform: translate(0%,0%) translateZ(1px) !important;
+            }
+            h2{
+                transform: translate(0%,0%) translateZ(1px) !important;
+                font-size: 4.5vw !important;
+            }
+        }
+        .middle{
+            // flex-direction: column !important;
+            .design,.develop{
+                font-size: 7vw !important;
+                &::first-letter{
+                    font-size: 8vw !important;
+                }
+            }
+            // .develop{
+            //     margin-bottom: 5rem !important;
+            // }
+        }
+        .bottom.row{
+            width: 6% !important;
+            div{
+                height: 1.5vw !important;
+                width: 1.5vw !important;
+            }
+        }
+    }
+    .recent_works,.about_me,.contact_me,.skills_section,.nav_section{
+        .top{
+            i{
+                font-size: 5vw !important;
+                transform: translate(0%,0%) translateZ(1px) !important;
+            }
+        }
+        .bottom.row{
+            width: 6% !important;
+            div{
+                height: 1.5vw !important;
+                width: 1.5vw !important;
+            }
+        }
+    }
 
-//   }
+    .recent_works{
+        .middle{
+            justify-content: space-evenly !important;
+            flex-direction: column !important;
+            height: 80vh !important;
+            h2,p,a{
+                position: static !important;
+                transform: none !important;
 
-// @media only screen and (max-width: 600px) {
+            }
+            h2{
+                @include flexRow();
+                width: 100% !important;
+                align-items: flex-end !important;
+                line-height: 1;
+                font-size: 8vw !important;
+                span{
+                    font-size: 5vw !important;
+                }
+            }
+            span{
+                @include flexRow();
+            }
+            p{
+                @include flexCol();
+                width: 100% !important;
+                font-size: 4vw !important;
+                margin: 5% 0% !important;
+                a{
+                    width: 30% !important;
+                }
+            }
+            .gameprev{
+                display: none !important;
+            }
+        }
+    }
+}
 
-// .the_beginning{
-    
-//     .imgs_container{
-//         height: 50vh !important;
-//         width: 50vh !important;
-//         transform: translate(-30%,-50%) !important;
-//     }
-//     .row{
-//         i{
-//             font-size: 8vw !important;
-//             transform: translate(0%,0%) translateZ(1px) !important;
-//         }
-//         h2{
-//             transform: translate(0%,0%) translateZ(1px) !important;
-//             font-size: 7.5vw !important;
-//         }
-//     }
-//     .middle{
-//         flex-direction: column !important;
-//         .design,.develop{
-//             font-size: 10vw !important;
-//             &::first-letter{
-//                 font-size: 11vw !important;
-//             }
-//         }
-//         .develop{
-//             margin-bottom: 8rem !important;
-//         }
-//     }
-//     .bottom.row{
-//         width: 13% !important;
-//         div{
-//             height: 3vw !important;
-//             width: 3vw !important;
-//         }
-//     }
-// }
+@media only screen and (max-width: 600px) {
 
-// }
+    .the_beginning{
+        
+        .imgs_container{
+            height: 50vh !important;
+            width: 50vh !important;
+            transform: translate(-30%,-50%) !important;
+        }
+        .row{
+            i{
+                font-size: 8vw !important;
+                transform: translate(0%,0%) translateZ(1px) !important;
+            }
+            h2{
+                transform: translate(0%,0%) translateZ(1px) !important;
+                font-size: 7.5vw !important;
+            }
+        }
+        .middle{
+            flex-direction: column !important;
+            .design,.develop{
+                font-size: 10vw !important;
+                &::first-letter{
+                    font-size: 11vw !important;
+                }
+            }
+            .develop{
+                margin-bottom: 8rem !important;
+            }
+        }
+        .bottom.row{
+            width: 13% !important;
+            div{
+                height: 3vw !important;
+                width: 3vw !important;
+            }
+        }
+    }
+    .recent_works,.about_me,.contact_me,.skills_section,.nav_section{
+        .top{
+            i{
+                font-size: 8vw !important;
+                transform: translate(0%,0%) translateZ(1px) !important;
+            }
+        }
+        .bottom.row{
+            width: 13% !important;
+            div{
+                height: 3vw !important;
+                width: 3vw !important;
+            }
+        }
+    }
+
+    .recent_works{
+        .middle{
+            justify-content: space-evenly !important;
+            flex-direction: column !important;
+            height: 80vh !important;
+            h2,p,a{
+                position: static !important;
+                transform: none !important;
+
+            }
+            h2{
+                @include flexCol();
+                width: 100% !important;
+                align-items: center !important;
+                line-height: 1;
+                font-size: 10vw !important;
+                span{
+                    font-size: 10vw !important;
+                }
+            }
+            span{
+                @include flexCol();
+                a{
+                    width:50vw !important;
+                    height:10vh !important;
+                }
+            }
+            p{
+                @include flexCol();
+                width: 100% !important;
+                font-size: 5vw !important;
+                margin: 5% 0% !important;
+                a{
+                    width: 50% !important;
+                }
+            }
+
+        }
+    }
+}

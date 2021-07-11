@@ -103,7 +103,8 @@ const resetImageTrans = () => {
 document.addEventListener('mousemove',(e)=>{
     displayDirection(e.pageX,e.pageY,pageWidth);
     navigationIndicator.style=`top:${e.pageY}px;left:${e.pageX-20}px;`;
-
+    pageWidth = window.innerWidth;
+    pageHeight = window.innerHeight;
 })
 
 // do not change, good for now
