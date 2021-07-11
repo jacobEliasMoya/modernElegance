@@ -905,3 +905,87 @@ body{
 
     }
 }
+
+@media only screen and (max-width: 1000px) {
+
+    .the_beginning{
+       
+        .imgs_container{
+            height: 50vh !important;
+            width: 50vh !important;
+            transform: translate(-30%,-50%) !important;
+        }
+        .row{
+            i{
+                font-size: 5vw !important;
+                transform: translate(0%,0%) translateZ(1px) !important;
+            }
+            h2{
+                transform: translate(0%,0%) translateZ(1px) !important;
+                font-size: 4.5vw !important;
+            }
+        }
+        .middle{
+            // flex-direction: column !important;
+            .design,.develop{
+                font-size: 7vw !important;
+                &::first-letter{
+                    font-size: 8vw !important;
+                }
+            }
+            // .develop{
+            //     margin-bottom: 5rem !important;
+            // }
+        }
+        .bottom.row{
+            width: 6% !important;
+            div{
+                height: 1.5vw !important;
+                width: 1.5vw !important;
+            }
+        }
+    }
+
+  }
+
+@media only screen and (max-width: 600px) {
+
+.the_beginning{
+    
+    .imgs_container{
+        height: 50vh !important;
+        width: 50vh !important;
+        transform: translate(-30%,-50%) !important;
+    }
+    .row{
+        i{
+            font-size: 8vw !important;
+            transform: translate(0%,0%) translateZ(1px) !important;
+        }
+        h2{
+            transform: translate(0%,0%) translateZ(1px) !important;
+            font-size: 7.5vw !important;
+        }
+    }
+    .middle{
+        flex-direction: column !important;
+        .design,.develop{
+            font-size: 10vw !important;
+            &::first-letter{
+                font-size: 11vw !important;
+            }
+        }
+        .develop{
+            margin-bottom: 8rem !important;
+        }
+    }
+    .bottom.row{
+        width: 13% !important;
+        div{
+            height: 3vw !important;
+            width: 3vw !important;
+        }
+    }
+}
+
+}

@@ -1275,4 +1275,77 @@ body .skills_section .middle .wordpress {
   right: 0;
   bottom: 0;
 }
+
+@media only screen and (max-width: 1000px) {
+  .the_beginning .imgs_container {
+    height: 50vh !important;
+    width: 50vh !important;
+    -webkit-transform: translate(-30%, -50%) !important;
+            transform: translate(-30%, -50%) !important;
+  }
+  .the_beginning .row i {
+    font-size: 5vw !important;
+    -webkit-transform: translate(0%, 0%) translateZ(1px) !important;
+            transform: translate(0%, 0%) translateZ(1px) !important;
+  }
+  .the_beginning .row h2 {
+    -webkit-transform: translate(0%, 0%) translateZ(1px) !important;
+            transform: translate(0%, 0%) translateZ(1px) !important;
+    font-size: 4.5vw !important;
+  }
+  .the_beginning .middle .design, .the_beginning .middle .develop {
+    font-size: 7vw !important;
+  }
+  .the_beginning .middle .design::first-letter, .the_beginning .middle .develop::first-letter {
+    font-size: 8vw !important;
+  }
+  .the_beginning .bottom.row {
+    width: 6% !important;
+  }
+  .the_beginning .bottom.row div {
+    height: 1.5vw !important;
+    width: 1.5vw !important;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .the_beginning .imgs_container {
+    height: 50vh !important;
+    width: 50vh !important;
+    -webkit-transform: translate(-30%, -50%) !important;
+            transform: translate(-30%, -50%) !important;
+  }
+  .the_beginning .row i {
+    font-size: 8vw !important;
+    -webkit-transform: translate(0%, 0%) translateZ(1px) !important;
+            transform: translate(0%, 0%) translateZ(1px) !important;
+  }
+  .the_beginning .row h2 {
+    -webkit-transform: translate(0%, 0%) translateZ(1px) !important;
+            transform: translate(0%, 0%) translateZ(1px) !important;
+    font-size: 7.5vw !important;
+  }
+  .the_beginning .middle {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .the_beginning .middle .design, .the_beginning .middle .develop {
+    font-size: 10vw !important;
+  }
+  .the_beginning .middle .design::first-letter, .the_beginning .middle .develop::first-letter {
+    font-size: 11vw !important;
+  }
+  .the_beginning .middle .develop {
+    margin-bottom: 8rem !important;
+  }
+  .the_beginning .bottom.row {
+    width: 13% !important;
+  }
+  .the_beginning .bottom.row div {
+    height: 3vw !important;
+    width: 3vw !important;
+  }
+}
 /*# sourceMappingURL=styles.css.map */
