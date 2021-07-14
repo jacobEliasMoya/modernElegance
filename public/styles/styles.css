@@ -1152,6 +1152,8 @@ body .contact_me .middle .inner h3 {
 body .skills_section {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
+  -webkit-transform: rotateX(-90deg) translate(0%, -150%) translateZ(200px);
+          transform: rotateX(-90deg) translate(0%, -150%) translateZ(200px);
 }
 
 body .skills_section .row .down {

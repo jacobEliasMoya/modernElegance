@@ -817,8 +817,7 @@ body{
 
     .skills_section{
         transform: rotate(0deg);
-        // transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);
-
+        transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);
         .row{
             .down{
                 background-color: rgba(255, 255, 255, 0.479) !important;
@@ -910,9 +909,7 @@ body{
                 right: 0;
                 bottom: 0;
             }
-
         }
-
     }
 }
 @media only screen and (max-width: 1000px) {
