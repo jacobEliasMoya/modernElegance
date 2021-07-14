@@ -102,7 +102,7 @@ body{
 
         .navigationIcons{
             @include absCentered();
-            font-size: 2.5vw;
+            font-size: 2vw;
             display: none;
             text-shadow: 0 0 1rem white;
             color: white;
@@ -817,7 +817,8 @@ body{
 
     .skills_section{
         transform: rotate(0deg);
-        transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);
+        // transform: rotateX(-90deg) translate(0%,-150%) translateZ(200px);
+
         .row{
             .down{
                 background-color: rgba(255, 255, 255, 0.479) !important;
@@ -840,6 +841,15 @@ body{
             @include fullScreener();
             min-height: auto !important;
             @include absCentered();
+        h2{
+            @include flexRow();
+            align-items: flex-end !important;
+            line-height: .7;
+            span{
+                position: static !important;
+                margin: 0rem 2vw;
+            }
+        }
             img{
                 width: 10vw;
                 border-radius: 100%;
@@ -959,7 +969,6 @@ body{
             }
         }
     }
-
     .recent_works{
         .middle{
             justify-content: space-evenly !important;
@@ -996,6 +1005,65 @@ body{
                 display: none !important;
             }
         }
+    }
+
+    .skills_section{
+        .middle{
+            min-height: auto !important;
+            flex-direction: column !important;
+            justify-content: space-evenly !important;
+            h2{
+                position: static !important;
+                align-items: flex-end !important;
+                transform: none !important;
+                line-height: .7;
+                width: 100% !important;
+                font-size: 8vw !important;
+
+                span{
+                    position: static !important;
+                    font-size: 5vw !important;
+
+                }
+            }
+            span{
+                position: static !important;
+                h3{
+                    font-size: 4vw !important;
+                }
+            }
+
+            .skillset{
+                width: 70%;
+                flex-wrap: wrap;
+            }
+
+            .skillset.second{
+                margin-bottom: -10rem !important;
+            }
+
+            .html{
+                width: 15vw !important;
+            }
+            .css{
+                width: 10vw !important;
+
+            }
+            .sass{
+                width: 10vw !important;
+            }
+            .javascript{
+                width: 15vw !important;
+            }
+            .react{
+                width: 10vw !important;
+            }
+            .wordpress{
+                width: 10vw !important;
+            }
+
+        }
+
     }
 }
 
@@ -1092,5 +1160,47 @@ body{
             }
 
         }
+    }
+
+    .skills_section{
+        .middle{
+            h2{
+                font-size: 10vw !important;
+                span{
+                    font-size: 10vw !important;
+                }
+            }
+            span{
+                h3{
+                    font-size: 7vw !important;
+                }
+            }
+
+            .skillset{
+                width: 90%;
+            }
+
+            .html{
+                width: 20vw !important;
+            }
+            .css{
+                width: 13vw !important;
+            }
+            .sass{
+                width: 13vw !important;
+            }
+            .javascript{
+                width: 20vw !important;
+
+            }
+            .react{
+                width: 13vw !important;
+            }
+            .wordpress{
+                width: 13vw !important;
+            }
+
+        }
+
     }
 }

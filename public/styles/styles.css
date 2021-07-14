@@ -70,7 +70,7 @@ body .navigationContainer .navigationIcons {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
-  font-size: 2.5vw;
+  font-size: 2vw;
   display: none;
   text-shadow: 0 0 1rem white;
   color: white;
@@ -1152,8 +1152,6 @@ body .contact_me .middle .inner h3 {
 body .skills_section {
   -webkit-transform: rotate(0deg);
           transform: rotate(0deg);
-  -webkit-transform: rotateX(-90deg) translate(0%, -150%) translateZ(200px);
-          transform: rotateX(-90deg) translate(0%, -150%) translateZ(200px);
 }
 
 body .skills_section .row .down {
@@ -1185,6 +1183,31 @@ body .skills_section .middle {
   top: 50%;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+}
+
+body .skills_section .middle h2 {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: end !important;
+      -ms-flex-align: end !important;
+          align-items: flex-end !important;
+  line-height: .7;
+}
+
+body .skills_section .middle h2 span {
+  position: static !important;
+  margin: 0rem 2vw;
 }
 
 body .skills_section .middle img {
@@ -1396,6 +1419,63 @@ body .skills_section .middle .wordpress {
   .recent_works .middle .gameprev {
     display: none !important;
   }
+  .skills_section .middle {
+    min-height: auto !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+  }
+  .skills_section .middle h2 {
+    position: static !important;
+    -webkit-box-align: end !important;
+        -ms-flex-align: end !important;
+            align-items: flex-end !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+    line-height: .7;
+    width: 100% !important;
+    font-size: 8vw !important;
+  }
+  .skills_section .middle h2 span {
+    position: static !important;
+    font-size: 5vw !important;
+  }
+  .skills_section .middle span {
+    position: static !important;
+  }
+  .skills_section .middle span h3 {
+    font-size: 4vw !important;
+  }
+  .skills_section .middle .skillset {
+    width: 70%;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+  .skills_section .middle .skillset.second {
+    margin-bottom: -10rem !important;
+  }
+  .skills_section .middle .html {
+    width: 15vw !important;
+  }
+  .skills_section .middle .css {
+    width: 10vw !important;
+  }
+  .skills_section .middle .sass {
+    width: 10vw !important;
+  }
+  .skills_section .middle .javascript {
+    width: 15vw !important;
+  }
+  .skills_section .middle .react {
+    width: 10vw !important;
+  }
+  .skills_section .middle .wordpress {
+    width: 10vw !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1525,6 +1605,36 @@ body .skills_section .middle .wordpress {
   }
   .recent_works .middle p a {
     width: 50% !important;
+  }
+  .skills_section .middle h2 {
+    font-size: 10vw !important;
+  }
+  .skills_section .middle h2 span {
+    font-size: 10vw !important;
+  }
+  .skills_section .middle span h3 {
+    font-size: 7vw !important;
+  }
+  .skills_section .middle .skillset {
+    width: 90%;
+  }
+  .skills_section .middle .html {
+    width: 20vw !important;
+  }
+  .skills_section .middle .css {
+    width: 13vw !important;
+  }
+  .skills_section .middle .sass {
+    width: 13vw !important;
+  }
+  .skills_section .middle .javascript {
+    width: 20vw !important;
+  }
+  .skills_section .middle .react {
+    width: 13vw !important;
+  }
+  .skills_section .middle .wordpress {
+    width: 13vw !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
