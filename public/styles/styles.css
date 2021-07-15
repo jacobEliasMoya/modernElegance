@@ -54,7 +54,7 @@ body:hover .the_beginning .imgs_container img {
 
 body .navigationContainer {
   position: absolute;
-  z-index: 2;
+  z-index: 1000000000;
   position: absolute;
   left: 50%;
   top: 50%;
@@ -1302,6 +1302,48 @@ body .skills_section .middle .wordpress {
 }
 
 @media only screen and (max-width: 1000px) {
+  .nav_section .middle {
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+  }
+  .nav_section .middle h2 {
+    background-size: none !important;
+    border: none !important;
+    -webkit-transition: all ease .25s;
+    transition: all ease .25s;
+    position: static !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+    font-size: 10vw !important;
+  }
+  .nav_section .middle h2:hover {
+    color: #3700FF;
+  }
+  .nav_section .middle .gohome {
+    -webkit-transform: translate(-50%, -270%);
+            transform: translate(-50%, -270%);
+  }
+  .nav_section .middle .goabout {
+    -webkit-transform: translate(85%, -70%) rotate(90deg);
+            transform: translate(85%, -70%) rotate(90deg);
+  }
+  .nav_section .middle .gocontact {
+    -webkit-transform: translate(-50%, 110%);
+            transform: translate(-50%, 110%);
+  }
+  .nav_section .middle .gowork {
+    -webkit-transform: translate(-50%, -75%);
+            transform: translate(-50%, -75%);
+  }
+  .nav_section .middle .goskills {
+    -webkit-transform: translate(-190%, -70%) rotate(-90deg);
+            transform: translate(-190%, -70%) rotate(-90deg);
+  }
   .the_beginning .imgs_container {
     height: 50vh !important;
     width: 50vh !important;
@@ -1478,6 +1520,108 @@ body .skills_section .middle .wordpress {
   .skills_section .middle .wordpress {
     width: 10vw !important;
   }
+  .about_me {
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+  }
+  .about_me .middle {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    width: 90% !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+  }
+  .about_me .middle h2 {
+    position: static !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+    font-size: 8vw !important;
+  }
+  .about_me .middle h2 span {
+    position: static !important;
+    font-size: 5vw !important;
+  }
+  .about_me .middle div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    height: auto !important;
+    width: 100%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .about_me .middle div p {
+    height: 100%;
+    font-size: 4vw !important;
+    text-align: center !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .about_me .middle div .rightside {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    text-align: right;
+    -webkit-transform: translate(3%);
+            transform: translate(3%);
+  }
+  .about_me .middle div img {
+    position: absolute;
+    width: 20vw;
+  }
+  .about_me .middle div .family {
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translate(-25%, 25%);
+            transform: translate(-25%, 25%);
+  }
+  .about_me .middle div .guitar {
+    left: 0;
+    bottom: 0;
+    -webkit-transform: translate(35%, -25%) rotate(-10deg);
+            transform: translate(35%, -25%) rotate(-10deg);
+  }
+  .about_me .middle .inner .descwords {
+    -webkit-transform: none !important;
+            transform: none !important;
+    position: static !important;
+    -webkit-box-align: start !important;
+        -ms-flex-align: start !important;
+            align-items: flex-start !important;
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: row !important;
+            flex-direction: row !important;
+  }
+  .about_me .middle .inner .descwords h3 {
+    margin: 2rem;
+    text-align: center;
+    font-size: 4vw !important;
+  }
+  .about_me .middle .left_inner .descwords {
+    -webkit-box-orient: horizontal !important;
+    -webkit-box-direction: reverse !important;
+        -ms-flex-direction: row-reverse !important;
+            flex-direction: row-reverse !important;
+  }
 }
 
 @media only screen and (max-width: 600px) {
@@ -1637,6 +1781,61 @@ body .skills_section .middle .wordpress {
   }
   .skills_section .middle .wordpress {
     width: 13vw !important;
+  }
+  .about_me {
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+  }
+  .about_me .middle {
+    width: 90% !important;
+  }
+  .about_me .middle h2 {
+    font-size: 10vw !important;
+  }
+  .about_me .middle h2 span {
+    font-size: 10vw !important;
+  }
+  .about_me .middle div p {
+    font-size: 5vw !important;
+    text-align: center !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .about_me .middle div .rightside {
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+    text-align: right;
+    -webkit-transform: translate(3%);
+            transform: translate(3%);
+  }
+  .about_me .middle .inner .descwords {
+    -webkit-transform: none !important;
+            transform: none !important;
+    position: static !important;
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .about_me .middle .inner .descwords h3 {
+    margin: 0rem;
+    text-align: center;
+    font-size: 6vw !important;
+  }
+  .about_me .middle .left_inner .descwords {
+    margin-bottom: 7vh;
+    -webkit-box-orient: vertical !important;
+    -webkit-box-direction: normal !important;
+        -ms-flex-direction: column !important;
+            flex-direction: column !important;
+  }
+  .about_me .middle .right_inner .descwords {
+    margin-top: 7vh;
   }
 }
 /*# sourceMappingURL=styles.css.map */

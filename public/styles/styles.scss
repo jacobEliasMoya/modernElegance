@@ -96,7 +96,7 @@ body{
     }   
     .navigationContainer{
         position: absolute;
-        z-index: 2;
+        z-index: 1000000000;
         @include absCentered();
         transition: none;
 
@@ -573,9 +573,6 @@ body{
     // leave alone for now
     .about_me,.contact_me{
         transform: rotateX(90deg) translate(0%,150%) translateZ(200px);
-        // transform: none;
-
-
         .row{
             i{
                 z-index: 1;
@@ -914,6 +911,40 @@ body{
 }
 @media only screen and (max-width: 1000px) {
 
+    .nav_section{
+
+        .middle{
+            flex-direction: column !important;
+            justify-content: space-evenly !important;
+            h2{
+                background-size: none !important;
+                border: none !important;
+                transition: all ease .25s;
+                position: static !important;
+                transform: none !important;
+                font-size: 10vw !important;
+                &:hover{
+                    color: #3700FF;
+                }
+            }
+            .gohome{
+                transform: translate(-50%,-270%);
+            }
+            .goabout{
+                transform: translate(85%, -70%) rotate(90deg);
+            }
+            .gocontact{
+                transform: translate(-50%,110%);                
+            }
+            .gowork{
+                transform: translate(-50%,-75%);                
+            }
+            .goskills{
+                transform: translate(-190%,-70%) rotate(-90deg);
+            }
+        }
+    }
+
     .the_beginning{
        
         .imgs_container{
@@ -1003,7 +1034,6 @@ body{
             }
         }
     }
-
     .skills_section{
         .middle{
             min-height: auto !important;
@@ -1062,6 +1092,82 @@ body{
         }
 
     }
+    .about_me{
+        justify-content: space-evenly !important;
+        .middle{
+            align-items: center !important;
+            width: 90% !important;
+            flex-direction: column !important;
+            justify-content: space-evenly !important;
+            h2{
+                position: static !important;
+                transform: none !important;
+                font-size: 8vw !important;
+
+                span{
+                    position: static !important;
+                    font-size: 5vw !important;
+
+                }
+            }
+            div{
+                @include flexCol();
+                height: auto !important;
+                // background: blue;
+                width: 100%;
+                justify-content: space-between;
+                p{
+                    height: 100%;
+                    font-size: 4vw !important;
+                    text-align: center !important;
+                    transform: none !important;
+                }
+                .rightside{
+                    // background: red;
+                    justify-content: flex-end;
+                    text-align: right;
+                    transform: translate(3%);
+                }
+                img{
+                    position: absolute;
+                    width: 20vw;
+                }
+                .family{
+                    left: 0;
+                    bottom: 0;
+                    transform: translate(-25%,25%);
+                } 
+                .guitar{
+                    left: 0;
+                    bottom: 0;
+                    transform: translate(35%,-25%) rotate(-10deg);
+                } 
+
+
+            } 
+
+            .inner{
+                .descwords{
+                    transform: none !important;
+                    position: static !important;
+                    align-items: flex-start !important;
+                    flex-direction: row !important;
+                    h3{
+                        margin: 2rem;
+                        text-align: center;
+                        font-size: 4vw !important;
+                    }
+                }
+            }
+            .left_inner{
+                .descwords{
+                    flex-direction: row-reverse !important;
+                }
+            }
+
+        }
+    }
+
 }
 
 @media only screen and (max-width: 600px) {
@@ -1118,7 +1224,6 @@ body{
             }
         }
     }
-
     .recent_works{
         .middle{
             justify-content: space-evenly !important;
@@ -1158,7 +1263,6 @@ body{
 
         }
     }
-
     .skills_section{
         .middle{
             h2{
@@ -1199,5 +1303,56 @@ body{
 
         }
 
+    }
+    .about_me{
+        justify-content: space-evenly !important;
+        .middle{
+            width: 90% !important;
+            h2{
+                font-size: 10vw !important;
+                span{
+                    font-size: 10vw !important;
+                }
+            }
+            div{
+                p{
+                    font-size: 5vw !important;
+                    text-align: center !important;
+                    transform: none !important;
+                }
+                .rightside{
+                    // background: red;
+                    justify-content: flex-end;
+                    text-align: right;
+                    transform: translate(3%);
+                }
+            } 
+
+            .inner{
+                .descwords{
+                    transform: none !important;
+                    position: static !important;
+                    align-items: center !important;
+                    flex-direction: column !important;
+                    h3{
+                        margin: 0rem;
+                        text-align: center;
+                        font-size: 6vw !important;
+                    }
+                }
+            }
+            .left_inner{
+                .descwords{
+                    margin-bottom: 7vh;
+                    flex-direction: column !important;
+                }
+            }
+
+            .right_inner{
+                .descwords{
+                    margin-top: 7vh;
+                }
+            }
+        }
     }
 }
