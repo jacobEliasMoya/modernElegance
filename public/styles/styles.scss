@@ -1343,14 +1343,14 @@ body{
             }
             .left_inner{
                 .descwords{
-                    margin-bottom: 7vh;
+                    margin-bottom: 0vh !important;
                     flex-direction: column !important;
                 }
             }
 
             .right_inner{
                 .descwords{
-                    margin-top: 7vh;
+                    margin-top: 0vh !important;
                 }
             }
         }

@@ -1828,14 +1828,14 @@ body .skills_section .middle .wordpress {
     font-size: 6vw !important;
   }
   .about_me .middle .left_inner .descwords {
-    margin-bottom: 7vh;
+    margin-bottom: 0vh !important;
     -webkit-box-orient: vertical !important;
     -webkit-box-direction: normal !important;
         -ms-flex-direction: column !important;
             flex-direction: column !important;
   }
   .about_me .middle .right_inner .descwords {
-    margin-top: 7vh;
+    margin-top: 0vh !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
