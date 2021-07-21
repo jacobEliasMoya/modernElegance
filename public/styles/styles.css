@@ -906,8 +906,6 @@ body .about_me .middle .inner h3, body .contact_me .middle .inner h3 {
 body .contact_me {
   -webkit-transform: rotateY(-90deg) translate(200%) translateZ(100px);
           transform: rotateY(-90deg) translate(200%) translateZ(100px);
-  -webkit-transform: none;
-          transform: none;
 }
 
 body .contact_me .row .down {
