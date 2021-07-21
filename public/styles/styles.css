@@ -694,6 +694,11 @@ body .nav_section {
   position: absolute;
   height: 100vh;
   width: 100%;
+  background-color: black;
+}
+
+body .nav_section .bottom {
+  visibility: hidden !important;
 }
 
 body .nav_section .row h2 {
@@ -1715,6 +1720,18 @@ body .skills_section .middle .wordpress {
     width: 100%;
     height: 10rem;
   }
+  .contact_me .middle .right_inner form span input::-webkit-input-placeholder, .contact_me .middle .right_inner form span textarea::-webkit-input-placeholder {
+    color: white;
+  }
+  .contact_me .middle .right_inner form span input:-ms-input-placeholder, .contact_me .middle .right_inner form span textarea:-ms-input-placeholder {
+    color: white;
+  }
+  .contact_me .middle .right_inner form span input::-ms-input-placeholder, .contact_me .middle .right_inner form span textarea::-ms-input-placeholder {
+    color: white;
+  }
+  .contact_me .middle .right_inner form span input::placeholder, .contact_me .middle .right_inner form span textarea::placeholder {
+    color: white;
+  }
   .contact_me .middle .right_inner form #submit {
     background: #3700ffaf;
     width: 100% !important;
@@ -1956,6 +1973,117 @@ body .skills_section .middle .wordpress {
   }
   .about_me .middle .right_inner .descwords {
     margin-top: 0vh !important;
+  }
+  .contact_me .middle {
+    -webkit-box-align: center !important;
+        -ms-flex-align: center !important;
+            align-items: center !important;
+    width: 90% !important;
+    -webkit-box-pack: space-evenly !important;
+        -ms-flex-pack: space-evenly !important;
+            justify-content: space-evenly !important;
+  }
+  .contact_me .middle h2 {
+    position: static !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+    font-size: 10vw !important;
+  }
+  .contact_me .middle h2 span {
+    position: static !important;
+    font-size: 10vw !important;
+  }
+  .contact_me .middle div {
+    height: auto !important;
+  }
+  .contact_me .middle .left_inner .contact {
+    font-size: 5vw !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .contact_me .middle .right_inner {
+    position: relative;
+  }
+  .contact_me .middle .right_inner form {
+    width: 88%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -ms-flex-direction: column !important;
+        flex-direction: column !important;
+    -webkit-transform: none !important;
+            transform: none !important;
+  }
+  .contact_me .middle .right_inner form span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify !important;
+        -ms-flex-pack: justify !important;
+            justify-content: space-between !important;
+    width: 100% !important;
+  }
+  .contact_me .middle .right_inner form span input, .contact_me .middle .right_inner form span textarea {
+    max-height: 2rem;
+    padding: none !important;
+    width: 50% !important;
+    background: white;
+    border: none;
+    margin-left: 0rem !important;
+    font-weight: bolder;
+    color: black;
+    font-family: arial;
+    min-height: 2rem !important;
+    margin-bottom: 0rem !important;
+  }
+  .contact_me .middle .right_inner form span input::after, .contact_me .middle .right_inner form span textarea::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    background: red;
+    width: 100%;
+    height: 10rem;
+  }
+  .contact_me .middle .right_inner form span textarea {
+    min-height: 4rem !important;
+  }
+  .contact_me .middle .right_inner form #submit {
+    margin-top: 2rem !important;
+    background: #3700ffaf;
+    padding: 1% 1% !important;
+    font-size: 5vw !important;
+  }
+  .contact_me .middle .getintouch {
+    margin-bottom: 3.5vh !important;
+  }
+  .contact_me .middle .getintouch a {
+    font-size: 5vw !important;
+  }
+  .contact_me .middle .getintouch a i {
+    font-size: 12vw !important;
   }
 }
 /*# sourceMappingURL=styles.css.map */
